@@ -1,7 +1,6 @@
 "use client"
 import React from 'react';
 import { Row, Col, Card, Button } from 'react-bootstrap';
-
 import Image from 'next/image';
 import Layout from '@/app/components/Layout/Laytout';
 
