@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal, Button, Form, Container, Row, Col } from "react-bootstrap";
-import cross_icon from "../../../../public/assets/images/svg/cross_)icon.svg"
+import cross_icon from "../../../../public/assets/images/svg/cross_icon.svg"
 import Image from "next/image";
 
 interface Props {

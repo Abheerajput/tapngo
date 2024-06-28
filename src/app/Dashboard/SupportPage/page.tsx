@@ -82,14 +82,14 @@ const Support = () => {
       <div className='d-flex gap-3'>
 <Button
   variant={showOpenTickets ? 'link' : ''}
-  className={showOpenTickets ? 'text-decoration-underline' : ''}
+  className={showOpenTickets ? 'text-primary color_blue' : ''}
   onClick={() => setShowOpenTickets(true)}
 >
   Open Tickets
 </Button>
 <Button
   variant={!showOpenTickets ? 'link' : ''}
-  className={!showOpenTickets ? 'text-decoration-underline' : ''}
+  className={!showOpenTickets ? 'text-primary color_blue' : ''}
   onClick={() => setShowOpenTickets(false)}
 >
   Resolved Tickets

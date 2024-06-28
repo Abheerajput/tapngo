@@ -71,7 +71,7 @@ const Admindashboard: React.FC = () => {
           <Menu.Item key="1">
             <Link href="/Dashboard/HomeDashboard">
             <div className="d-flex gap-2 align-items-center">
-              <Image src={home_icon} alt="home_icon" width={24} height={24} />
+              <Image src={home_icon} alt="home_icon" width={20} height={20} />
               <span className="mb-0 fs_14 red_ff">Home</span>
             </div>
             </Link>
@@ -80,7 +80,7 @@ const Admindashboard: React.FC = () => {
             <Link href="/Dashboard/Usages">
           
             <div className="d-flex gap-2 align-items-center">
-              <Image src={usage_icon} alt="Usage_icon" width={24} height={24} />
+              <Image src={usage_icon} alt="Usage_icon" width={20} height={20} />
               <span className="mb-0 fs_14 red_ff">Usage</span>
             </div>
             </Link>
@@ -88,7 +88,7 @@ const Admindashboard: React.FC = () => {
           <Menu.Item key="3" onClick={() => handleMenuClick('3')}>
             <Link href="/Dashboard/Subcriptiondashboard">
             <div className="d-flex gap-2 align-items-center">
-              <Image src={subscription_icon} alt="Subscription_icon" width={24} height={24} />
+              <Image src={subscription_icon} alt="Subscription_icon" width={20} height={20} />
               <span className="mb-0 fs_14 red_ff">Subscription</span>
             </div>
             </Link>
@@ -96,7 +96,7 @@ const Admindashboard: React.FC = () => {
           <Menu.Item key="4" onClick={() => handleMenuClick('4')}>
             <Link href="/Dashboard/FamilyMember">
             <div className="d-flex gap-2 align-items-center">
-              <Image src={Family_icon} alt="FamilyM_icon" width={24} height={24} />
+              <Image src={Family_icon} alt="FamilyM_icon" width={20} height={20} />
               <span className="mb-0 fs_14 red_ff">Family Member</span>
             </div>
             </Link>
@@ -104,7 +104,7 @@ const Admindashboard: React.FC = () => {
           <Menu.Item key="5" onClick={() => handleMenuClick('5')}>
             <Link href="/Dashboard/MyOffers">
             <div className="d-flex gap-2 align-items-center">
-              <Image src={Offers_icon} alt="Offer_icon" width={24} height={24} />
+              <Image src={Offers_icon} alt="Offer_icon" width={20} height={20} />
               <span className="mb-0 fs_14 red_ff">My Offers</span>
             </div>
             </Link>
@@ -113,7 +113,7 @@ const Admindashboard: React.FC = () => {
             <Link href="/Dashboard/FAQ">
           
             <div className="d-flex gap-2 align-items-center">
-              <Image src={Faq_icon} alt="faq_icon" width={24} height={24} />
+              <Image src={Faq_icon} alt="faq_icon" width={20} height={20} />
               <span className="mb-0 fs_14 red_ff">FAQ</span>
             </div>
               </Link>

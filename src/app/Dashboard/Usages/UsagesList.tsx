@@ -9,7 +9,11 @@ import Share from "../../../../public/assets/images/svg/share.svg"
 import download  from "../../../../public/assets/images/svg/download.svg"
 import Image from 'next/image';
 
+type ComponentType = 'Usage' | 'Tax Invoice' | 'Statements';
 const UsagesList = () => {
+  const [activeComponent, setActiveComponent] = useState<ComponentType>('Usage');
+  
+  const handleComponentChange = (component: ComponentType) => () => setActiveComponent(component);
   const data = [
     {
       code: '001491',
@@ -134,7 +138,7 @@ const UsagesList = () => {
         <table className='table'>
           <thead>
             <tr>
-              <th scope='col' className='red-ff text-start'>Invoice No.</th>
+              <th scope='col' className='red-ff text-start '>Invoice No.</th>
               <th scope='col' className='text-start'>Date</th>
               <th scope='col' className='text-start'>From</th>
               <th scope='col' className='text-start'>To</th>
@@ -219,21 +223,26 @@ const UsagesList = () => {
               <Row className="d-none d-md-flex">
                 <Col sm={4} className="pe-0 text-center" onClick={() => handleTabClick('Usage')}>
                   <Nav.Link href="#" className={selectedTab === 'Usage' ? 'active-tab' : ''}>
-                    <h3 className="red_ff fs_24 text-dark">Usage</h3>
+
+                    <h3 className={`red_ff fs_24 text-dark  ${activeComponent === 'Usage' ? 'active border_radius_blue color_blue' : ''}`}
+                        onClick={handleComponentChange('Usage')}>
+                    Usage</h3>
                   </Nav.Link>
-                  <div className={`mt-2 border-1 border ${selectedTab === 'Usage' ? 'custom_border' : 'border-body'}`}></div>
+                  <div className={`mt-2 border-1  border ${selectedTab === 'Usage' ? 'custom_border' : 'border-body'}`} ></div>
                 </Col>
                 <Col sm={4} className="px-0 text-center" onClick={() => handleTabClick('TaxInvoice')}>
                   <Nav.Link href="#" className={selectedTab === 'TaxInvoice' ? 'active-tab' : ''}>
-                    <h3 className="fs_24 text-dark">Tax Invoice</h3>
+                    <h3 className={`fs_24 text-dark red_ff ${activeComponent === 'Tax Invoice' ? 'active border_radius_blue color_blue' : ''} `}
+                      onClick={handleComponentChange('Tax Invoice')}>Tax Invoice</h3>
                   </Nav.Link>
-                  <div className={`mt-2 border-1 border ${selectedTab === 'TaxInvoice' ? 'custom_border' : 'border-body'}`}></div>
+                  <div className={`mt-2  border ${selectedTab === 'TaxInvoice' ? 'custom_border' : 'border-body'}`}></div>
                 </Col>
                 <Col sm={4} className="px-0 text-center" onClick={() => handleTabClick('Statements')}>
                   <Nav.Link href="#" className={selectedTab === 'Statements' ? 'active-tab' : ''}>
-                    <h3 className="fs_24 text-dark red_ff">Statements</h3>
+                    <h3 className={`fs_24 text-dark red_ff ${activeComponent === 'Statements' ? 'active border_radius_blue color_blue' : ''}`} onClick={handleComponentChange('Statements')}>Statements</h3>
+
                   </Nav.Link>
-                  <div className={`mt-2 border-1 border ${selectedTab === 'Statements' ? 'custom_border' : 'border-body'}`}></div>
+                  <div className={`mt-2 border ${selectedTab === 'Statements' ? 'active ' : ''}`}></div>
                 </Col>
               </Row>
 

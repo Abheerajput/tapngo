@@ -31,7 +31,7 @@ const FamilyMember = () => {
   return (
     <Layout>
 
-     <div className='py-3 px-3 bg-white'>
+     <div className='py-3 mt-3 px-3 bg-white'>
       <h1 className='pb-2 fw-semibold'>Family Members</h1>
       <Row>
         <Col xs={12} md={3} className='mb-4 m-0 p-0'>

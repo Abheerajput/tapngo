@@ -186,16 +186,16 @@ const Home: React.FC = () => {
                   <Nav.Link
                     href="#"
                     className={
-                      selectedTab === "Manual" ? "active-tab color_blue" : ""
+                      selectedTab === "Manual" ? " border_radius_blue color_blue" : ""
                     }
                   >
                     <h3 className="red_ff fs_16">Manual</h3>
                   </Nav.Link>
                   {selectedTab === "Manual" ? (
-                    <div className="mt-2 custom_border border-body border-1 border"></div>
+                    <div className="mb-3   border"></div>
                   ) : (
                     <>
-                      <div className="mt-2  border-body border-1 border"></div>
+                      <div className="    border"></div>
                     </>
                   )}
                 </Col>
@@ -207,16 +207,16 @@ const Home: React.FC = () => {
                   <Nav.Link
                     href="#"
                     className={
-                      selectedTab === "Auto" ? "active-tab color_blue" : ""
+                      selectedTab === "Auto" ? " border_radius_blue color_blue" : ""
                     }
                   >
                     <h3 className="red_ff fs_16">Auto</h3>
                   </Nav.Link>
                   {selectedTab === "Auto" ? (
-                    <div className="mt-2 custom_border border-1 border"></div>
+                    <div className="mb-3  border"></div>
                   ) : (
                     <>
-                      <div className="mt-2  border-body border-1 border"></div>
+                      <div className="mt-2  border"></div>
                     </>
                   )}
                 </Col>
@@ -229,17 +229,17 @@ const Home: React.FC = () => {
                     href="#"
                     className={
                       selectedTab === "Subscription"
-                        ? "active-tab color_blue"
+                        ? "active-tab border_radius_blue color_blue"
                         : ""
                     }
                   >
                     <h3 className="red_ff fs_16">Subscription</h3>
                   </Nav.Link>
                   {selectedTab === "Subscription" ? (
-                    <div className="mt-2 custom_border border-1 border"></div>
+                    <div className="mb-3   border"></div>
                   ) : (
                     <>
-                      <div className="mt-2  border-body border-1 border"></div>
+                      <div className="mt-2   border"></div>
                     </>
                   )}
                 </Col>

@@ -34,24 +34,24 @@ const Profile = () => {
 
    
     <Row className="justify-content-center text-nowrap">
-<div className='d-flex flex-wrap gap-5 gap-sm-2 mt-3 p-0 m-0 ps-3 ms-3 text-nowrap'>
+<div className='d-flex flex-wrap gap-md-5 gap-sm-2 mt-3 p-0 m-0 ps-3 ms-3 text-nowrap'>
   <p
-    className={`text-sm fs_28 red_ff text-color fw-light C-pointer m-0 p-0 ${activeComponent === 'Profile' ? 'active' : ''}`}
+    className={`text-sm fs_28 red_ff text-color fw-light C-pointer m-0 p-0 ${activeComponent === 'Profile' ? 'active  text-primary' : ''}`}
     onClick={handleComponentChange('Profile')}>
     Profile
   </p>
   <p
-    className={`text-sm fs_28 red_ff text-color fw-light C-pointer m-0 p-0 ${activeComponent === 'Cards' ? 'active' : ''}`}
+    className={`text-sm fs_28 red_ff text-color fw-light C-pointer m-0 p-0 ${activeComponent === 'Cards' ? 'active text-primary' : ''}`}
     onClick={handleComponentChange('Cards')}>
     Cards
   </p>
   <p
-    className={`text-sm fs_28 red_ff text-color fw-light C-pointer m-0 p-0 ${activeComponent === 'SocialMedia' ? 'active' : ''}`}
+    className={`text-sm fs_28 red_ff text-color fw-light C-pointer m-0 p-0 ${activeComponent === 'SocialMedia' ? 'active text-primary' : ''}`}
     onClick={handleComponentChange('SocialMedia')}>
     Social Media
   </p>
   <p
-    className={`text-sm fs_28 red_ff text-color fw-light C-pointer m-0 p-0 ${activeComponent === 'CarRegistration' ? 'active' : ''}`}
+    className={`text-sm fs_28 red_ff text-color fw-light C-pointer m-0 p-0 ${activeComponent === 'CarRegistration' ? 'active text-primary' : ''}`}
     onClick={handleComponentChange('CarRegistration')}>
     Car Registration
   </p>
@@ -63,8 +63,8 @@ const Profile = () => {
         <Col xs={12}>
           {activeComponent === 'Profile' && (
             <Row className="justify-content-center">
-              <Col xs={12} md={6} className='d-flex justify-content-around flex-wrap'>
-                <div className="me-5 pe-5">
+              <Col xs={12} md={6} className='d-flex justify-content-start flex-wrap'>
+                <div className=" pe-5">
                   <div className='d-flex ps-3 mt-3'>
                     <Image src={user} alt="User" className='Image-fluid' />
                     <div className='mt-3 ms-3'>
@@ -72,7 +72,7 @@ const Profile = () => {
                       <p className='fs_16 fw-medium red_ff text-dark'>+01 234 567 890</p>
                     </div>
                   </div>
-                  <Form className="mt-5 ps-4  text-dark" onSubmit={handleSubmit}>
+                  <Form className="mt-5   text-dark" onSubmit={handleSubmit}>
                     <div className='d-flex flex-column flex-md-row gap-3   md:w-100 ps-3 my-3 '>
                       <Form.Group className="mb-3 w-100 fs_16 red_ff fw-light " controlId="firstName">
                         <Form.Label>First Name</Form.Label>

@@ -126,7 +126,7 @@ const Manual = () => {
           <p className="mb-0 fs_18 fw-semibold red_ff">Grand Total</p>
           <h4 className="mb-0 fs_16 fw-semibold red_ff">$00.00</h4>
         </div>
-        <button className="bg_blue w-100 border-0 py-3 fs_16 red_ff text-white fw-semibold rounded-2 mt-4">
+        <button className="button-bg-color w-100 border-0 py-3 fs_16 red_ff text-white fw-semibold rounded-2 mt-4">
           Pay Now
         </button>
       </div>
