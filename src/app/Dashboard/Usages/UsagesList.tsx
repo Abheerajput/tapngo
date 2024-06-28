@@ -228,21 +228,21 @@ const UsagesList = () => {
                         onClick={handleComponentChange('Usage')}>
                     Usage</h3>
                   </Nav.Link>
-                  <div className={`mt-1   border ${selectedTab === 'Usage' ? 'custom_border' : 'border-body'}`} ></div>
+                  <div className={`mt-2   border ${selectedTab === 'Usage' ? 'custom_border' : 'border-body'}`} ></div>
                 </Col>
                 <Col sm={4} className="px-0 text-center" onClick={() => handleTabClick('TaxInvoice')}>
                   <Nav.Link href="#" className={selectedTab === 'TaxInvoice' ? 'active-tab' : ''}>
                     <h3 className={`fs_24 text-dark red_ff m-0 p-0 ${activeComponent === 'Tax Invoice' ? 'active  color_blue' : ''} `}
                       onClick={handleComponentChange('Tax Invoice')}>Tax Invoice</h3>
                   </Nav.Link>
-                  <div className={`mt-1  border ${selectedTab === 'TaxInvoice' ? 'custom_border' : 'border-body'}`}></div>
+                  <div className={`mt-2  border ${selectedTab === 'TaxInvoice' ? 'custom_border' : 'border-body'}`}></div>
                 </Col>
                 <Col sm={4} className="px-0 text-center" onClick={() => handleTabClick('Statements')}>
                   <Nav.Link href="#" className={selectedTab === 'Statements' ? 'active-tab' : ''}>
                     <h3 className={`fs_24 text-dark red_ff m-0 p-0 ${activeComponent === 'Statements' ? 'active  color_blue' : ''}`} onClick={handleComponentChange('Statements')}>Statements</h3>
 
                   </Nav.Link>
-                  <div className={`mt-1 border-1 border ${selectedTab === 'Statements' ? 'active ' : ''}`}></div>
+                  <div className={`mt-2 border-1 border ${selectedTab === 'Statements' ? 'active ' : ''}`}></div>
                 </Col>
               </Row>
 
