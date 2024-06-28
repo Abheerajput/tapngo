@@ -78,11 +78,11 @@ const Subscription = () => {
                   </div>
                   <hr />
                   <Card.Text>
-                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="tick" />{row.info}</p>
-                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="tick" />{row.info1}</p>
-                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="tick" />{row.info2}</p>
-                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="tick" />{row.info3}</p>
-                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="tick" />{row.info4}</p>
+                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="tick" width={20} />{row.info}</p>
+                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="tick"  width={20} />{row.info1}</p>
+                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="tick"  width={20} />{row.info2}</p>
+                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="tick" width={20}  />{row.info3}</p>
+                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="tick" width={20} />{row.info4}</p>
                   </Card.Text>
                   </div>
                   <div className='d-flex justify-content-center mt-5 pt-5 red_ff'>
