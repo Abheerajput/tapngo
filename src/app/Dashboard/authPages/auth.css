@@ -1,0 +1,56 @@
+.custom_auth_header_width {
+  max-width: 600px;
+  padding: 0 12px;
+  width: 100%;
+}
+
+.custom_border {
+  border-color: #1364f1 !important;
+}
+
+input {
+  outline: none !important;
+}
+
+.bg_blue {
+  background-color: #1364f1;
+}
+
+.tdn {
+  text-decoration: underline !important ;
+}
+
+.modal-dialog {
+  padding: 20px;
+}
+
+.modal-content {
+  padding: 5px !important;
+}
+
+.skip_btn {
+  border: 1px solid rgba(19, 100, 241, 1);
+  padding: 7px 0;
+  background-color: transparent !important;
+}
+
+.custom_width {
+  max-width: 450px !important;
+  width: 100%;
+}
+
+.verify_input {
+  padding: 0px 10px;
+  font-size: 35px !important;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 10px !important;
+  }
+  .modal-dialog {
+    padding: 0px;
+  }
+}

@@ -1,0 +1,19 @@
+.custom-bg {
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content:center;
+}
+
+.custom-right-margin {
+    margin-left: -5%;
+}
+
+@media (max-width: 768px){
+    .custom-margin {
+        margin-bottom: 1rem;
+        margin-left: -11%;
+    }
+}
+
