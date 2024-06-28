@@ -90,28 +90,28 @@ const Usages: React.FC = () => {
             <span className='fs_24 fw-semibold red_ff text-dark'>Usage Category</span>
             <Row xs={2} md={2} className="g-2">
               <Col lg={6} xs={6} className="p-2">
-                <div className='border border-color ps-2 pt-2 p-3 text-dark'>
+                <div className='border border-color ps-3 pt-2 p-3 text-dark'>
                   <p>Car-Wash</p>
                   <Image src={Group} alt="Car-Wash" />
                   <p className='fs_20 fw-semibold red_ff pt-3 text-dark'>$116</p>
                 </div>
               </Col>
               <Col lg={6} xs={6} className="p-2">
-                <div className='border text-dark border-color ps-2 pt-2 p-3 text-nowrap'>
+                <div className='border text-dark border-color ps-3 pt-2 p-3 text-nowrap'>
                   <p>Laundry Shop</p>
                   <Image src={Group} alt="Laundry Shop" />
                   <p className='fs_20 fw-semibold red_ff pt-3 text-dark'>$116</p>
                 </div>
               </Col>
               <Col lg={6} xs={6} className="p-2">
-                <div className='border border-color ps-2 pt-2 p-3 text-dark text-nowrap'>
+                <div className='border border-color ps-3 pt-2 p-3 text-dark text-nowrap'>
                   <p>Valet Service</p>
                   <Image src={Group} alt="Valet Service" />
                   <p className='fs_20 fw-semibold red_ff pt-3 text-dark'>$116</p>
                 </div>
               </Col>
               <Col lg={6} xs={6} className="p-2">
-                <div className='border border-color ps-2 pt-2 p-3 text-dark'>
+                <div className='border border-color ps-3 pt-2 p-3 text-dark'>
                   <p>Ping-Pong</p>
                   <Image src={Group} alt="Ping-Pong" />
                   <p className='fs_20 fw-semibold red_ff pt-3 text-dark'>$116</p>

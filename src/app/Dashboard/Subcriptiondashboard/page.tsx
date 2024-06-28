@@ -1,9 +1,10 @@
 "use client"
 import React from 'react';
 import { Row, Col, Card, Button } from 'react-bootstrap';
-import Tick from "../../../../public/assets/images/svg/tick.svg";
+
 import Image from 'next/image';
 import Layout from '@/app/components/Layout/Laytout';
+
 import "./subcription.css"
 const Subscription = () => {
   const data = [
@@ -77,11 +78,11 @@ const Subscription = () => {
                   </div>
                   <hr />
                   <Card.Text>
-                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="" />{row.info}</p>
-                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="" />{row.info1}</p>
-                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="" />{row.info2}</p>
-                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="" />{row.info3}</p>
-                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="" />{row.info4}</p>
+                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src="/assets/Images/svg/tick.svg" alt="tick" />{row.info}</p>
+                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src="/assets/Images/svg/tick.svg" alt="tick" />{row.info1}</p>
+                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src="/assets/Images/svg/tick.svg" alt="tick" />{row.info2}</p>
+                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src="/assets/Images/svg/tick.svg" alt="tick" />{row.info3}</p>
+                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src="/assets/Images/svg/tick.svg" alt="tick" />{row.info4}</p>
                   </Card.Text>
                   </div>
                   <div className='d-flex justify-content-center mt-5 pt-5 red_ff'>

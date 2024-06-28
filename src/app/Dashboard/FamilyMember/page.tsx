@@ -72,7 +72,7 @@ const FamilyMember = () => {
             <Card.Body className='p-0'>
               <div className='d-flex justify-content-between m-0 p-0 pt-2 align-items-center px-3'>
                 <p className='fs_20 fw-semibold m-0'>Analytics</p>
-                <Button className='red_ff fs_16 rounded-1 text-white py-2 px-3 border-0 button-color fw-medium' onClick={handleShowDownloadModal}>
+                <Button className='red_ff fs_16 rounded-1 text-white fs-sm-10 py-2 px-3 border-0 button-color fw-medium' onClick={handleShowDownloadModal}>
                   Download Card
                 </Button>
               </div>
