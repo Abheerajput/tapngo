@@ -182,7 +182,7 @@ const UsagesList = () => {
               <th scope='col' className='text-start text-dark'>Total Usage</th>
               <th scope='col' className='text-start text-dark'>Total Recharge</th>
               <th scope='col' className='text-success text-start text-dark'>Card Balance</th>
-              <th scope='col' className='text-start text-dark'>Amount</th>
+              <th scope='col' className='text-start text-dark'></th>
               <th scope='col text-start'></th>
               <th scope='col text-start'></th>
             </tr>
@@ -224,25 +224,25 @@ const UsagesList = () => {
                 <Col sm={4} className="pe-0 text-center" onClick={() => handleTabClick('Usage')}>
                   <Nav.Link href="#" className={selectedTab === 'Usage' ? 'active-tab' : ''}>
 
-                    <h3 className={`red_ff fs_24 text-dark  ${activeComponent === 'Usage' ? 'active border_radius_blue color_blue' : ''}`}
+                    <h3 className={`red_ff fs_24 text-dark m-0 p-0 ${activeComponent === 'Usage' ? 'active border_radius_blue color_blue' : ''}`}
                         onClick={handleComponentChange('Usage')}>
                     Usage</h3>
                   </Nav.Link>
-                  <div className={`mt-2 border-1  border ${selectedTab === 'Usage' ? 'custom_border' : 'border-body'}`} ></div>
+                  <div className={`mt-1   border ${selectedTab === 'Usage' ? 'custom_border' : 'border-body'}`} ></div>
                 </Col>
                 <Col sm={4} className="px-0 text-center" onClick={() => handleTabClick('TaxInvoice')}>
                   <Nav.Link href="#" className={selectedTab === 'TaxInvoice' ? 'active-tab' : ''}>
-                    <h3 className={`fs_24 text-dark red_ff ${activeComponent === 'Tax Invoice' ? 'active border_radius_blue color_blue' : ''} `}
+                    <h3 className={`fs_24 text-dark red_ff m-0 p-0 ${activeComponent === 'Tax Invoice' ? 'active border_radius_blue color_blue' : ''} `}
                       onClick={handleComponentChange('Tax Invoice')}>Tax Invoice</h3>
                   </Nav.Link>
-                  <div className={`mt-2  border ${selectedTab === 'TaxInvoice' ? 'custom_border' : 'border-body'}`}></div>
+                  <div className={`mt-1  border ${selectedTab === 'TaxInvoice' ? 'custom_border' : 'border-body'}`}></div>
                 </Col>
                 <Col sm={4} className="px-0 text-center" onClick={() => handleTabClick('Statements')}>
                   <Nav.Link href="#" className={selectedTab === 'Statements' ? 'active-tab' : ''}>
-                    <h3 className={`fs_24 text-dark red_ff ${activeComponent === 'Statements' ? 'active border_radius_blue color_blue' : ''}`} onClick={handleComponentChange('Statements')}>Statements</h3>
+                    <h3 className={`fs_24 text-dark red_ff m-0 p-0 ${activeComponent === 'Statements' ? 'active border_radius_blue color_blue' : ''}`} onClick={handleComponentChange('Statements')}>Statements</h3>
 
                   </Nav.Link>
-                  <div className={`mt-2 border ${selectedTab === 'Statements' ? 'active ' : ''}`}></div>
+                  <div className={`mt-1 border-1 border ${selectedTab === 'Statements' ? 'active ' : ''}`}></div>
                 </Col>
               </Row>
 
