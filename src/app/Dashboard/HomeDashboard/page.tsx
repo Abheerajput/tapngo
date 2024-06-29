@@ -38,7 +38,7 @@ const Home: React.FC = () => {
         <Row>
           <Col xl={7}>
             <Row >
-              <Col md={7} className="mt-4  mt-md-0  rounded-2 ">
+              <Col md={7} className="  mt-md-0  rounded-2 ">
                 <div className="card pt-4  d-flex flex-column justify-content-between h-100 p-md-4 p-3 border-0">
                   <div>
                     <p className="fs_20 red_ff fw-normal mb-0 dashboard-text-color">Current Balance</p>
@@ -170,7 +170,7 @@ const Home: React.FC = () => {
                   <div className="border rounded-5 mb-3 m-0 ">
 
 
-                    <Form className="border-1  rounded-1 py-1 px-2 d-flex justify-content-center">
+                    <Form className="border-1  rounded-1  px-2 d-flex justify-content-center">
                       <Form.Check
                         type="switch"
                         

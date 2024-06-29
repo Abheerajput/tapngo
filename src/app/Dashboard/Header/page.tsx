@@ -80,7 +80,7 @@ const Navbar = () => {
                                     <Image src={noti_icon} alt="noti_icon" width={40} height={40} />
                                 </Link>
                             </div>
-                            <div className="d-flex align-items-center gap-1 line-height border py-1  pe-2 bg-white rounded-5">
+                            <div className="d-flex align-items-center gap-1 line-height border   pe-2 bg-white rounded-5">
                                 <div>
                                     <Link href="/Dashboard/Profile">
                                         <Image src={profile} alt="profile" width={38} height={33} />
@@ -101,12 +101,12 @@ const Navbar = () => {
                     visible={drawerVisible}
                     className="drawer-responsive bg-sidebar w-75"
                 >
-                    <div className="d-flex align-items-center justify-content-between bg-sidebar">
+                    <div className="d-flex align-items-center justify-content-between bg-sidebar m-0 p-0">
                         <Link href="#">
-                            <Image width={130} className="mt-4 pt-lg-0 ps-4 mb-2" src={logo} alt="logo" />
+                            <Image width={130} className=" pt-lg-0 ps-4 " src={logo} alt="logo" />
                         </Link>
                         <a href="#">
-                            <Image onClick={onCloseDrawer} width={90} className="px-3 pt-4 pt-lg-0 px-4 pb-2" src={close_icon} alt="close_icon" />
+                            <Image onClick={onCloseDrawer} width={90} className="px-3  pt-lg-0 px-4 " src={close_icon} alt="close_icon" />
                         </a>
                     </div>
 
