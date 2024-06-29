@@ -224,21 +224,21 @@ const UsagesList = () => {
                 <Col sm={4} className="pe-0 text-center" onClick={() => handleTabClick('Usage')}>
                   <Nav.Link href="#" className=   {selectedTab === 'Usage' ? '' : ''}>
 
-                    <p className={`fs_24 Usage-custom-margin border-1 fw-semibold  List-text-color m-0 p-0 ${selectedTab === 'Usage' ? 'Usage-active' : ''}  `}>
+                    <p className={`fs_24 Usage-custom-margin border-1 fw-normal  List-text-color m-0 p-0 ${selectedTab === 'Usage' ? 'Usage-active' : ''}  `}>
                     Usage</p>
                   </Nav.Link>
                   <div className={` border ${selectedTab === 'Usage' ? '' : ''}`} ></div>
                 </Col>
                 <Col sm={4} className="px-0 text-center" onClick={() => handleTabClick('TaxInvoice')}>
                   <Nav.Link href="#" className={selectedTab === 'TaxInvoice' ? '' : ''}>
-                    <p className={`fs_24 Usage-custom-margin border-1 fw-semibold List-text-color red_ff m-0 p-0  text-nowrap ${selectedTab === 'TaxInvoice' ? ' Usage-active' : ''} `}
+                    <p className={`fs_24 Usage-custom-margin border-1 fw-normal List-text-color red_ff m-0 p-0  text-nowrap ${selectedTab === 'TaxInvoice' ? ' Usage-active' : ''} `}
                     >Tax Invoice</p>
                   </Nav.Link>
                   <div className={` border ${selectedTab === 'TaxInvoice' ? ' ' : ''}`}></div>
                 </Col>
                 <Col sm={4} className="px-0 text-center" onClick={() => handleTabClick('Statements')}>
                   <Nav.Link href="#" className={selectedTab === 'Statements' ? '' : ''}>
-                    <p className={`fs_24 Usage-custom-margin border-1 fw-semibold List-text-color red_ff m-0 p-0 ${selectedTab === 'Statements' ? 'Usage-active' : ''}`}>Statements</p>
+                    <p className={`fs_24 Usage-custom-margin border-1 fw-normal List-text-color red_ff m-0 p-0 ${selectedTab === 'Statements' ? 'Usage-active' : ''}`}>Statements</p>
 
                   </Nav.Link>
                   <div className={` border ${selectedTab === 'Statements' ? '' : ''}`}></div>
