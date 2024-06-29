@@ -80,7 +80,7 @@ const Navbar = () => {
                                     <Image src={noti_icon} alt="noti_icon" width={40} height={40} />
                                 </Link>
                             </div>
-                            <div className="d-flex align-items-center gap-1 line-height border   pe-2 bg-white rounded-5">
+                            <div className="d-flex align-items-center gap-1 line-height border py-1   pe-2 bg-white rounded-5">
                                 <div>
                                     <Link href="/Dashboard/Profile">
                                         <Image src={profile} alt="profile" width={38} height={33} />

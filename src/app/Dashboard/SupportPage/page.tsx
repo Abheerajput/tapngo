@@ -80,7 +80,7 @@ const Support = () => {
         <p className='fs_28 fw-semibold  text-nowrap dashboard-text-color m-0 p-0 fs-sm-20'>Support Tickets</p>
         <span className="d-flex ">
 
-        <button className='p-0 m-0 bg-primary rounded-2 px-2 text-white text-nowrap' onClick={handleShowModal}>
+        <button className='p-0 m-0 bg-primary rounded-2 px-3 py-2 text-white text-nowrap border-0' onClick={handleShowModal}>
           Raise Ticket
         </button>
         </span>

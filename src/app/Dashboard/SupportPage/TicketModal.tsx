@@ -24,15 +24,23 @@ const TicketModal: React.FC<TicketModalProps> = ({ show, handleClose }) => {
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
-        <Modal.Title className='dashboard-text-color'>Raise Ticket</Modal.Title>
+        <Modal.Title className='dashboard-text-color  border-0 '>Raise Ticket</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form>
           <Form.Group className="mb-3" controlId="name">
-            <Form.Label>Name</Form.Label>
-            <div className="d-flex">
+         
+            <div className="d-flex gap-2">
+              <div>
+
+            <Form.Label>First Name </Form.Label>
               <Form.Control type="text" placeholder="First Name" className="me-2" />
+              </div>
+ <div>
+  
+              <Form.Label>Last Name</Form.Label>
               <Form.Control type="text" placeholder="Last Name" />
+ </div>
             </div>
           </Form.Group>
 

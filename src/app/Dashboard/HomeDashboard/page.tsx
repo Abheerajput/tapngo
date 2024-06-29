@@ -73,8 +73,8 @@ const Home: React.FC = () => {
                       <option value="3">Three</option>
                     </Form.Select>
                   </div>
-                  <div className="d-flex align-items-center justify-content-between">
-                    <Image src={cercle_Image} alt="cercle_Image" />
+                  <div className="d-flex align-items-center  justify-content-between">
+                    <Image src={cercle_Image} alt="cercle_Image"  />
                     <div>
                       <div className="d-flex align-items-center gap-1">
                         <Image src={blue_image} alt="blue_image" />
@@ -170,7 +170,7 @@ const Home: React.FC = () => {
                   <div className="border rounded-5 mb-3 m-0 ">
 
 
-                    <Form className="border-1  rounded-1  px-2 d-flex justify-content-center">
+                    <Form className="border-1  rounded-1  ps-1 pe-2 d-flex justify-content-center">
                       <Form.Check
                         type="switch"
                         
