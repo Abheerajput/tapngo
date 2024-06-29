@@ -222,26 +222,26 @@ const UsagesList = () => {
             <div className="col-6">
               <Row className="d-none d-md-flex Usage-gap-lg-2">
                 <Col sm={4} className="pe-0 text-center" onClick={() => handleTabClick('Usage')}>
-                  <Nav.Link href="#" className=   {selectedTab === 'Usage' ? 'active-tab' : ''}>
+                  <Nav.Link href="#" className=   {selectedTab === 'Usage' ? '' : ''}>
 
-                    <p className={`fs_24  fw-semibold  List-text-color m-0 p-0 ${selectedTab === 'Usage' ? 'color_blue' : ''}  `}>
+                    <p className={`fs_24 Usage-custom-margin border-1 fw-semibold  List-text-color m-0 p-0 ${selectedTab === 'Usage' ? 'Usage-active' : ''}  `}>
                     Usage</p>
                   </Nav.Link>
-                  <div className={`Usage-custom-margin border-1 border ${selectedTab === 'Usage' ? 'Usage-active' : ''}`} ></div>
+                  <div className={` border ${selectedTab === 'Usage' ? '' : ''}`} ></div>
                 </Col>
                 <Col sm={4} className="px-0 text-center" onClick={() => handleTabClick('TaxInvoice')}>
-                  <Nav.Link href="#" className={selectedTab === 'TaxInvoice' ? 'active-tab' : ''}>
-                    <p className={`fs_24  fw-semibold List-text-color red_ff m-0 p-0  text-nowrap ${selectedTab === 'TaxInvoice' ? 'color_blue' : ''} `}
+                  <Nav.Link href="#" className={selectedTab === 'TaxInvoice' ? '' : ''}>
+                    <p className={`fs_24 Usage-custom-margin border-1 fw-semibold List-text-color red_ff m-0 p-0  text-nowrap ${selectedTab === 'TaxInvoice' ? ' Usage-active' : ''} `}
                     >Tax Invoice</p>
                   </Nav.Link>
-                  <div className={`Usage-custom-margin border-1 border ${selectedTab === 'TaxInvoice' ? 'Usage-active' : ''}`}></div>
+                  <div className={` border ${selectedTab === 'TaxInvoice' ? ' ' : ''}`}></div>
                 </Col>
                 <Col sm={4} className="px-0 text-center" onClick={() => handleTabClick('Statements')}>
-                  <Nav.Link href="#" className={selectedTab === 'Statements' ? 'active-tab' : ''}>
-                    <p className={`fs_24  fw-semibold List-text-color red_ff m-0 p-0 ${selectedTab === 'Statements' ? 'color_blue' : ''}`}>Statements</p>
+                  <Nav.Link href="#" className={selectedTab === 'Statements' ? '' : ''}>
+                    <p className={`fs_24 Usage-custom-margin border-1 fw-semibold List-text-color red_ff m-0 p-0 ${selectedTab === 'Statements' ? 'Usage-active' : ''}`}>Statements</p>
 
                   </Nav.Link>
-                  <div className={`Usage-custom-margin border-1 border ${selectedTab === 'Statements' ? 'Usage-active' : ''}`}></div>
+                  <div className={` border ${selectedTab === 'Statements' ? '' : ''}`}></div>
                 </Col>
               </Row>
 

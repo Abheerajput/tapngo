@@ -27,7 +27,7 @@
   border: none; 
 }
 .Usage-active {
-  color: #007bff;
+  color: #007bff !important;
   border-bottom: 3px solid #007bff !important; /* blue color */
   padding-bottom: 0.5px;
 }
