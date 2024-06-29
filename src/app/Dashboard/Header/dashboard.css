@@ -109,15 +109,21 @@
   .drawer-responsive .ant-drawer-body {
     padding: 0;
   }
+  
+
 }
 
-@media  (max-width: 768px){
+
+@media (max-width: 768px) {
+  .res-header-background-color {
+      width: 100%;
+      padding: 0 !important;
+      margin: 0 !important;
+  }
   .res-bg{
-background-color: white;
-  }
-}
-@media  (max-width: 768px){
-  .full-width{
-width: 100vw !important;
-  }
+    background-color: white;
+      }
+      .full-width{
+        width: 100vw !important;
+          }
 }

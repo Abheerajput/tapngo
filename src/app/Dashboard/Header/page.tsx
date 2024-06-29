@@ -39,8 +39,8 @@ const Navbar = () => {
 
     return (
         <div>
-            <Layout className="site-layout custom-background ">
-                <Header className="header-background-color mt-4 p-0 m-0 res-bg w-100 header-responsive custom-background">
+            <Layout className="site-layout custom-background custom_nav_padding ">
+                <Header className="header-background-color  mt-lg-4 p-0 m-0 res-bg w-100 header-responsive custom-background">
                     <div className="d-flex align-items-center ms-2  custom-backgound">
                         <Image
                             className="pe-3 menu-button"
@@ -60,12 +60,12 @@ const Navbar = () => {
                             />
                         </Link>
                     </div>
-                    <div className="d-lg-flex align-items-center full-width  d-flex header-background-color  w-100 pt-1  justify-content-between">
+                    <div className="d-lg-flex align-items-center full-width  d-flex  header-background-color  w-100 pt-1  justify-content-between">
                         <div className="d-none d-lg-block d-sm-none ">
                             <h6 className="mb-0 fs_20  fw-normal red_ff">Hey!</h6>
                             <h4 className="mb-0 fs_24 fw-semibold red_ff mt-1 text-nowrap">Andrew J.</h4>
                         </div>
-                        <div className="d-flex gap-4 align-items-center w-100 res-bg pe-2  justify-content-end">
+                        <div className="d-flex gap-4 align-items-center w-100 res-bg pe-2  justify-content-end" style={{marginTop:"-11px"}}>
                             <Form.Select
                                 className="rounded-5 d-none d-md-flex w-20"
                                 aria-label="Default select example"

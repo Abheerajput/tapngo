@@ -31,6 +31,8 @@ const Home: React.FC = () => {
 
   return (
     <Layout>
+<div className="px-2">
+
 
       <div className="py-4 ">
         <Row>
@@ -290,6 +292,7 @@ const Home: React.FC = () => {
             </Modal.Body>
           </Modal>
         </div>
+      </div>
       </div>
     </Layout>
   );

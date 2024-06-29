@@ -58,6 +58,9 @@ const Subscription = () => {
   return (
     <>
       <Layout>
+        <div className='px-3'>
+
+       
         <div className='rounded-2 p-md-4 p-3 mt-4 bg-white'>
           <Row className="align-items-center">
             <Col xs={12} className='ms-md-2'>
@@ -98,6 +101,7 @@ const Subscription = () => {
               </Col>
             ))}
           </Row>
+        </div>
         </div>
       </Layout>
     </>

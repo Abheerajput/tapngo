@@ -109,6 +109,9 @@ const Usages: React.FC = () => {
 
   return (
     <Layout>
+      <div className='px-3'>
+
+     
       <div className="bg-white mt-3 custom-padding rounded-2">
         <Row>
           <Col xs={12} md={8}>
@@ -176,6 +179,7 @@ const Usages: React.FC = () => {
           </Col>
         </Row>
         <UsagesList />
+      </div>
       </div>
     </Layout>
   );

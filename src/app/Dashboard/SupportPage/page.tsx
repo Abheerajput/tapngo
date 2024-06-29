@@ -68,6 +68,9 @@ const Support = () => {
     <>
     
     <Layout>
+      <div className='px-3'>
+
+      
       <div className='border-rounded'>
 
      
@@ -206,6 +209,7 @@ const Support = () => {
     </Col>
 
   </Row>
+  </div>
   </div>
   </Layout>
   </>

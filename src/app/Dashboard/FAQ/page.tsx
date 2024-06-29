@@ -21,6 +21,8 @@ const FrequentlyAskedQuestion = () => {
   return (
     <>
       <Layout>
+<div className='px-2'>
+
 
 
         <div className='px-3  bg-white rounded-2   px-3 mt-4'>
@@ -254,6 +256,7 @@ const FrequentlyAskedQuestion = () => {
 
             </div>
           </Row>
+        </div>
         </div>
       </Layout>
     </>

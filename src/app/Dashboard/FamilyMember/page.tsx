@@ -30,6 +30,8 @@ const FamilyMember = () => {
 
   return (
     <Layout>
+<div  className='px-2'>
+
 
      <div className='py-3 mt-3 px-4 rounded-2 bg-white'>
       <h1 className='pb-2 fw-semibold fs_28  red_ff dashboard-text-color'>Family Members</h1>
@@ -187,7 +189,9 @@ const FamilyMember = () => {
 
       <ModalComponent show={showAddMemberModal} handleClose={handleCloseAddMemberModal} handleSubmit={handleSubmit} />
       <DownloadCardModal show={showDownloadModal} handleClose={handleCloseDownloadModal} />
+      </div>
     </Layout>
+
   );
 };
 
