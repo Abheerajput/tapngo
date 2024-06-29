@@ -85,14 +85,14 @@ const NotificationPage = () => {
                   {notification.description}
                 </Col>
                 
-                <Col xs={12} md={2} className='d-flex align-items-center justify-content-md-end justify-content-start mt-2 mt-md-0'>
+                <Col xs={12} md={2} className='d-flex align-items-center respon-desc justify-content-md-end justify-content-start mt-2 mt-md-0'>
                   {notification.actions ? (
                     <>
                       <Button className='Accept-button mx-1'>Accept</Button>
                       <Button className='Decline-button mx-1'>Decline</Button>
                     </>
                   ) : (
-                    <p className='mb-0'>{notification.time}</p>
+                    <p className='mb-0 '>{notification.time}</p>
                   )}
                 </Col>
               </Row>

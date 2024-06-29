@@ -27,8 +27,19 @@ label {
 .bg_yellow {
   background-color: #ffca00;
 }
+.subscription-box{
+  height: 264px;
+  width: 234px;
+  background-color: #F8F8F8;
+}
+.dashboard-text-color{
+  color: #151515;
+}
+.subcription-text-color{
+  color: #202020;
+}
 .text-color{
-  color:#404040 ;
+  color:#666666 ;
 }
 .text-blue{
   color:#1364F1 ;

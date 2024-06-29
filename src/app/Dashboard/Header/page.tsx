@@ -39,9 +39,9 @@ const Navbar = () => {
 
     return (
         <div>
-            <Layout className="site-layout custom-background">
-                <Header className="site-layout-background p-0 m-0 w-100 header-responsive custom-background">
-                    <div className="d-flex align-items-center ps-2  custom-backgound">
+            <Layout className="site-layout custom-background ">
+                <Header className="header-background-color mt-4 p-0 m-0 res-bg w-100 header-responsive custom-background">
+                    <div className="d-flex align-items-center ms-2  custom-backgound">
                         <Image
                             className="pe-3 menu-button"
                             onClick={showDrawer}
@@ -60,7 +60,7 @@ const Navbar = () => {
                             />
                         </Link>
                     </div>
-                    <div className="d-lg-flex align-items-center d-flex custom-bg res-bg w-100 pt-1  justify-content-between">
+                    <div className="d-lg-flex align-items-center full-width  d-flex header-background-color  w-100 pt-1  justify-content-between">
                         <div className="d-none d-lg-block d-sm-none ">
                             <h6 className="mb-0 fs_20  fw-normal red_ff">Hey!</h6>
                             <h4 className="mb-0 fs_24 fw-semibold red_ff mt-1 text-nowrap">Andrew J.</h4>
@@ -80,7 +80,7 @@ const Navbar = () => {
                                     <Image src={noti_icon} alt="noti_icon" width={40} height={40} />
                                 </Link>
                             </div>
-                            <div className="d-flex align-items-center gap-1 line-height border py-1 px-2 bg-white rounded-5">
+                            <div className="d-flex align-items-center gap-1 line-height border py-1  pe-2 bg-white rounded-5">
                                 <div>
                                     <Link href="/Dashboard/Profile">
                                         <Image src={profile} alt="profile" width={38} height={33} />

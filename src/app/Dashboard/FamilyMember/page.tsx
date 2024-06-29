@@ -31,25 +31,25 @@ const FamilyMember = () => {
   return (
     <Layout>
 
-     <div className='py-3 mt-3 px-3 bg-white'>
-      <h1 className='pb-2 fw-semibold'>Family Members</h1>
-      <Row>
+     <div className='py-3 mt-3 px-4 rounded-2 bg-white'>
+      <h1 className='pb-2 fw-semibold fs_28  red_ff dashboard-text-color'>Family Members</h1>
+      <Row className='px-2'>
         <Col xs={12} md={3} className='mb-4 m-0 p-0'>
           <Card className='border-color d-flex flex-column justify-content-between pb-3 h-100 m-0'>
 
             <Card.Body className='p-0'>
 
               <div className='d-flex justify-content-between m-0 p-0 py-3 align-items-center px-3'>
-                <p className='fs_20 fw-semibold m-0 p-0'>Cards List</p>
+                <p className='fs_20 fw-semibold red_ff dashboard-text-color m-0 p-0'>Cards List</p>
                 <Image className='custom-plus-width m-0 p-0' src={plus} alt="Add Card" />
               </div>
               <div className='d-flex bg-lightblue p-0 justify-content-between'>
                 <div className='ms-2 pt-2'>
-                  <p className='fs_20 fw-semibold text-nowrap m-0 pb-1'>Andrew,s Card</p>
-                  <p className='fs_14 m-0 font-color1 red_ff'>Personal Card</p>
-                  <div className='d-flex align-items-center'>
+                  <p className='fs_18 fw-medium red_ff dashboard-text-color text-nowrap m-0 pb-1'>Andrew,s Card</p>
+                  <p className='fs_14 m-0 font-color1 red_ff light-text-color'>Personal Card</p>
+                  <div className='d-flex align-items-center '>
                     <Image src={greenball} alt="Active" />
-                    <p className='fs_14 ms-2 p-0 font-color1 red_ff m-0 d-flex align-items-center'>Active</p>
+                    <p className='fs_14 ms-2 p-0 font-color1 red_ff m-0 d-flex align-items-center light-text-color'>Active</p>
                   </div>
                 </div>
                 <div className='text-end pt-4 p-0 m-0'>
@@ -71,7 +71,7 @@ const FamilyMember = () => {
           <Card className='border-color d-flex flex-column justify-content-between h-100 p-0 m-0'>
             <Card.Body className='p-0'>
               <div className='d-flex justify-content-between m-0 p-0 pt-2 align-items-center px-3'>
-                <p className='fs_20 fw-semibold m-0'>Analytics</p>
+                <p className='fs_20 fw-semibold red_ff dashboard-text-color  m-0'>Analytics</p>
                 <Button className='red_ff fs_16 rounded-1 text-white fs-sm-10 py-2 px-3 border-0 button-color fw-medium' onClick={handleShowDownloadModal}>
                   Download Card
                 </Button>
@@ -79,17 +79,17 @@ const FamilyMember = () => {
               <hr />
               <div className='d-flex pt-2 bg-white px-3 justify-content-between flex-wrap'>
                 <div className='mb-4 red_ff'>
-                  <p className='fs_20 fw-semibold red_ff m-0 pb-3'>Overview</p>
-                  <p className='fs_14 m-0 font-color1 red_ff'>Current Balance</p>
-                  <p className='fs_32 mb-4 fw-semibold red_ff'>$12345.00</p>
+                  <p className='fs_20 fw-semibold red_ff dashboard-text-color m-0 pb-3'>Overview</p>
+                  <p className='fs_14 m-0 light-text-color fw-normal red_ff'>Current Balance</p>
+                  <p className='fs_32 mb-4 fw-medium dashboard-text-color red_ff'>$12345.00</p>
                   <div className='d-flex red_ff align-items-center gap-3 flex-wrap'>
                     <div>
-                      <p className='m-0 font-color1 red_ff'>Lifetime Credit Used</p>
-                      <p className='fs_18 fw-semibold mt-1 red_ff'>$1000000.00</p>
+                      <p className='m-0 fs_14 light-text-color fw-normal red_ff'>Lifetime Credit Used</p>
+                      <p className='fs_18 fw-medium dashboard-text-color mt-1 red_ff'>$1000000.00</p>
                     </div>
                     <div>
-                      <p className='m-0 font-color1 red_ff'>Account Type</p>
-                      <p className='fs_18 fw-semibold mt-1 red_ff'>Prepaid</p>
+                      <p className='m-0 fs_14 red_ff fw-normal light-text-color red_ff'>Account Type</p>
+                      <p className='fs_18 fw-medium dashboard-text-color mt-1 red_ff'>Prepaid</p>
                     </div>
                   </div>
                 </div>
@@ -99,31 +99,31 @@ const FamilyMember = () => {
               </div>
               <hr />
               <div>
-                <p className='ps-3 fs_20 fw-semibold red_ff'>Card Details</p>
+                <p className='ps-3 fs_20 fw-semibold red_ff dashboard-text-color'>Card Details</p>
                 <div className='d-flex align-items-center px-3 gap-3 justify-content-between flex-wrap'>
                 <Row className='w-100 justify-content-between'>
   <Col xs={6} md={3} className='d-flex'>
     <div>
-      <p className='m-0 fs_14 font-color1'>Card Number</p>
-      <p className='fs_18 fw-semibold mt-1 red_ff'>1234 5678 0123 4567</p>
+      <p className='m-0 fs_14 light-text-color fw-normal red_ff'>Card Number</p>
+      <p className='fs_18 fw-medium mt-1 red_ff'>1234 5678 0123 4567</p>
     </div>
   </Col>
   <Col xs={6} md={3} className='d-flex justify-content-center'>
     <div>
-      <p className='m-0 fs_14 font-color1'>Card Type</p>
-      <p className='fs_18 fw-semibold mt-1 red_ff'>Physical</p>
+      <p className='m-0 fs_14 light-text-color fw-normal red_ff'>Card Type</p>
+      <p className='fs_18 fw-medium mt-1 red_ff'>Physical</p>
     </div>
   </Col>
   <Col xs={6} md={3} className='d-flex '>
     <div>
-      <p className='m-0 fs_14 font-color1'>Name on Card</p>
-      <p className='fs_18 fw-semibold mt-1 red_ff'>Andrew James</p>
+      <p className='m-0 fs_14 light-text-color fw-normal red_ff'>Name on Card</p>
+      <p className='fs_18 fw-medium mt-1 red_ff'>Andrew James</p>
     </div>
   </Col>
   <Col xs={6} md={3} className='d-flex justify-content-center'>
     <div>
-      <p className='m-0 fs_14 font-color1'>Issued On</p>
-      <p className='fs_18 fw-semibold mt-1 red_ff'>02/24</p>
+      <p className='m-0 fs_14 light-text-color fw-normal red_ff'>Issued On</p>
+      <p className='fs_18 fw-medium mt-1 red_ff'>02/24</p>
     </div>
   </Col>
 </Row>
@@ -132,8 +132,8 @@ const FamilyMember = () => {
 
             </Card.Body>
             <Card.Footer className='d-flex justify-content-end gap-3 mt-5 pt-5  bg-white border-0'>
-              <Button className=' w-sm-40 top-up-button my-2 mx-1 red_ff fs_16 '>Top-Up Card</Button>
-              <Button className=' w-sm-40 top-up-button my-2 mx-1 red_ff fs_16'>Manage card</Button>
+              <Button className=' w-sm-40 top-up-button my-2 mx-1 red_ff fs_16 border-0 '>Top-Up Card</Button>
+              <Button className=' w-sm-40 top-up-button my-2 mx-1 red_ff fs_16 border-0'>Manage card</Button>
             </Card.Footer>
           </Card>
         </Col>
@@ -143,7 +143,7 @@ const FamilyMember = () => {
           <Card className='border-color d-flex flex-column h-100 p-0 m-0 bg-white'>
             <Card.Body className='p-0'>
               <div className='p-0 pt-3 px-3'>
-                <p className='fs_20 fw-semibold m-0'>Card Preferences</p>
+                <p className='fs_20 fw-semibold red_ff dashboard-text-color m-0'>Card Preferences</p>
               </div>
               <hr />
               <p className='px-3 fs_18 pb-3 fw-semibold m-0'>Color</p>
@@ -161,15 +161,15 @@ const FamilyMember = () => {
 </div>
 <div className=' d-flex justify-content-evenly flex-nowrap  pt-2 '>
   <span className='circle bg-5 rounded-circle'></span>
-  <span className='circle bg-6  rounded-circle'></span>
+  <span className='circle bg-6 rounded-circle'></span>
   <span className='circle bg-4 rounded-circle'></span>
   <span className='circle bg-2 rounded-circle'></span>
   <span className='circle bg-3 rounded-circle'></span>
 </div>
               <hr />
               <div className='px-3'>
-                <p className='fs_18 fw-semibold red_ff'>Name on Card</p>
-                <Form.Select className="red_ff" aria-label="Default select example">
+                <p className='fs_18 fw-semibold dashboard-text-color red_ff'>Name on Card</p>
+                <Form.Select className="red_ff fs_14 fw-normal" aria-label="Default select example">
                   <option>Select Preference</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>

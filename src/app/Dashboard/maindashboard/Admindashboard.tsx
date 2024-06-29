@@ -28,6 +28,7 @@ const Admindashboard: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
   const [drawerVisible, setDrawerVisible] = useState(false);
   const [selectedComponent, setSelectedComponent] = useState<ReactNode>();
+  const [selectedMenuItem, setSelectedMenuItem] = useState<string>('1');
 
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
@@ -42,8 +43,11 @@ const Admindashboard: React.FC = () => {
   };
 
   const handleMenuClick = (key: string) => {
-   
+
+    setSelectedMenuItem(key); // Update the selected menu item
+
     onCloseDrawer();
+
   };
 
   return (
@@ -68,60 +72,60 @@ const Admindashboard: React.FC = () => {
           </div>
         </Link>
         <Menu theme="dark" className='bg-sidebar'>
-          <Menu.Item key="1">
+          <Menu.Item key="1"  className={selectedMenuItem === '1'? 'active-color' : ''}>
             <Link href="/Dashboard/HomeDashboard">
             <div className="d-flex gap-2 align-items-center">
-              <Image src={home_icon} alt="home_icon" width={20} height={20} />
+              <Image src={home_icon} alt="home_icon" width={16} height={16} />
               <span className="mb-0 fs_14 red_ff">Home</span>
             </div>
             </Link>
           </Menu.Item>
-          <Menu.Item key="2">
+          <Menu.Item key="2"  className={selectedMenuItem === '2'? 'active-color' : ''}>
             <Link href="/Dashboard/Usages">
           
             <div className="d-flex gap-2 align-items-center">
-              <Image src={usage_icon} alt="Usage_icon" width={20} height={20} />
+              <Image src={usage_icon} alt="Usage_icon" width={16} height={16} />
               <span className="mb-0 fs_14 red_ff">Usage</span>
             </div>
             </Link>
           </Menu.Item>
-          <Menu.Item key="3" onClick={() => handleMenuClick('3')}>
+          <Menu.Item key="3"  className={selectedMenuItem === '1'? 'active-color' : ''} >
             <Link href="/Dashboard/Subcriptiondashboard">
             <div className="d-flex gap-2 align-items-center">
-              <Image src={subscription_icon} alt="Subscription_icon" width={20} height={20} />
+              <Image src={subscription_icon} alt="Subscription_icon" width={16} height={16} />
               <span className="mb-0 fs_14 red_ff">Subscription</span>
             </div>
             </Link>
           </Menu.Item>
-          <Menu.Item key="4" onClick={() => handleMenuClick('4')}>
+          <Menu.Item key="4"  className={selectedMenuItem === '1'? 'active-color' : ''}>
             <Link href="/Dashboard/FamilyMember">
             <div className="d-flex gap-2 align-items-center">
-              <Image src={Family_icon} alt="FamilyM_icon" width={20} height={20} />
+              <Image src={Family_icon} alt="FamilyM_icon" width={16} height={16} />
               <span className="mb-0 fs_14 red_ff">Family Member</span>
             </div>
             </Link>
           </Menu.Item>
-          <Menu.Item key="5" onClick={() => handleMenuClick('5')}>
+          <Menu.Item key="5"  className={selectedMenuItem === '1'? 'active-color' : ''}>
             <Link href="/Dashboard/MyOffers">
             <div className="d-flex gap-2 align-items-center">
-              <Image src={Offers_icon} alt="Offer_icon" width={20} height={20} />
+              <Image src={Offers_icon} alt="Offer_icon" width={16} height={16} />
               <span className="mb-0 fs_14 red_ff">My Offers</span>
             </div>
             </Link>
           </Menu.Item>
-          <Menu.Item key="6" onClick={() => handleMenuClick('6')}>
+          <Menu.Item key="6"  className={selectedMenuItem === '1'? 'active-color' : ''}>
             <Link href="/Dashboard/FAQ">
           
             <div className="d-flex gap-2 align-items-center">
-              <Image src={Faq_icon} alt="faq_icon" width={20} height={20} />
+              <Image src={Faq_icon} alt="faq_icon" width={16} height={16} />
               <span className="mb-0 fs_14 red_ff">FAQ</span>
             </div>
               </Link>
           </Menu.Item>
-          <Menu.Item key="7" onClick={() => handleMenuClick('7')}>
+          <Menu.Item key="7"  className={selectedMenuItem === '1'? 'active-color' : ''}>
             <Link href="/Dashboard/SupportPage">
             <div className="d-flex gap-2 align-items-center">
-              <Image src={Support_icon} alt="Support_icon" width={24} height={24} />
+              <Image src={Support_icon} alt="Support_icon" width={16} height={16} />
               <span className="mb-0 fs_14 red_ff">Support</span>
             </div>
             </Link>

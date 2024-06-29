@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
 import UsagesList from './UsagesList';
@@ -14,28 +14,28 @@ declare global {
 }
 
 const Usages: React.FC = () => {
+  const [year, setYear] = useState(new Date().getFullYear());
+
   useEffect(() => {
     const config = {
       type: "bar",
       data: {
         labels: [
-          "January", "February", "March", "April", "May", "June",
-          "July", "August", "September", "October", "November", "December",
+          "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+          "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
         ],
         datasets: [
           {
-            label: new Date().getFullYear().toString(),
+            label: "Top-Up",
             backgroundColor: "#FFCA00",
-            data: [30, 78, 56, 34, 100, 45, 13, 23, 23, 24, 54, 65, 34, 23],
-            fill: false,
-            barThickness: 10,
+            data: [90, 20, 130, 80, 50, 90, 30, 60, 90, 20, 80, 30],
+            barThickness: 20,
           },
           {
-            label: (new Date().getFullYear() - 1).toString(),
+            label: "Spending",
             backgroundColor: "#1364F1",
-            data: [27, 68, 86, 74, 10, 4, 87, 46, 43, 65, 54, 93, 13],
-            fill: false,
-            barThickness: 10,
+            data: [110, 80, 140, 120, 140, 110, 70, 80, 120, 120, 100, 70],
+            barThickness: 20,
           },
         ],
       },
@@ -44,7 +44,7 @@ const Usages: React.FC = () => {
         responsive: true,
         title: {
           display: false,
-          text: "Orders Chart",
+          text: "Usage Chart",
         },
         tooltips: {
           mode: "index",
@@ -56,26 +56,18 @@ const Usages: React.FC = () => {
         },
         legend: {
           labels: {
-            fontColor: "rgba(0,0,0,.4)",
+            fontColor: "rgba(0,0,0,.7)",
           },
-          align: "end",
-          position: "bottom",
+          align: "start",
+          position: "top",
         },
         scales: {
           xAxes: [
             {
               display: true,
-              scaleLabel: {
-                display: true,
-                labelString: "Month",
-              },
+             
               gridLines: {
-                borderDash: [2],
-                borderDashOffset: [2],
-                color: "rgba(33, 37, 41, 0.3)",
-                zeroLineColor: "rgba(33, 37, 41, 0.3)",
-                zeroLineBorderDash: [2],
-                zeroLineBorderDashOffset: [2],
+                display: false,
               },
               ticks: {
                 fontColor: "rgba(0,0,0,.7)",
@@ -90,13 +82,14 @@ const Usages: React.FC = () => {
                 labelString: "Value",
               },
               gridLines: {
-                borderDash: [2],
-                drawBorder: false,
-                borderDashOffset: [2],
-                color: "rgba(33, 37, 41, 0.2)",
-                zeroLineColor: "rgba(33, 37, 41, 0.15)",
-                zeroLineBorderDash: [2],
-                zeroLineBorderDashOffset: [2],
+                display: true,
+              },
+              ticks: {
+                beginAtZero: true,
+                suggestedMax: 160,
+                callback: function(value) {
+                  return '$' + value;
+                },
               },
             },
           ],
@@ -108,10 +101,11 @@ const Usages: React.FC = () => {
     if (ctx) {
       const context = ctx.getContext("2d");
       if (context) {
+        if (window.myBar) window.myBar.destroy();  
         window.myBar = new Chart(context, config);
       }
     }
-  }, []);
+  }, [year]);
 
   return (
     <Layout>
@@ -120,49 +114,59 @@ const Usages: React.FC = () => {
           <Col xs={12} md={8}>
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 rounded">
               <div className="rounded-t mb-0 px-4 py-3 bg-transparent">
-                <div className="flex flex-wrap items-center">
-                  <div className="relative w-full max-w-full flex-grow flex-1">
-                    <h6 className=" fs_24  red_ff mb-1  font-semibold">
+                <div className="d-flex justify-content-between align-items-center">
+                  <p className="fs_24 red_ff mb-1 font-semibold Usage-text-color">
                     Spending Overview
-                    </h6>
-                  </div>
+                  </p>
+                
                 </div>
               </div>
-              <div className="p-4 flex-auto">
+              <div className=" border border-1 flex-auto">
                 {/* Chart */}
-                <div className="relative h-400-px">
+                <div className='relative d-flex justify-content-end mt-3 pe-2 '>
+                <select 
+                    className="form-select w-auto" 
+                    value={year} 
+                    onChange={(e) => setYear(Number(e.target.value))}
+                  >
+                    {[2024, 2023, 2022].map(y => (
+                      <option key={y} value={y}>{y}</option>
+                    ))}
+                  </select>
+                </div>
+               
+                <div className="relative h-350-px">
                   <canvas id="bar-chart"></canvas>
                 </div>
               </div>
             </div>
-           
           </Col>
-          <Col xs={12} lg={4}>
-            <span className='fs_24 fw-semibold red_ff text-dark'>Usage Category</span>
-            <Row xs={2} md={2} className="g-2">
-              <Col lg={6} xs={6} className="p-2">
-                <div className='border border-color ps-3 pt-2 text-dark'>
-                  <p>Car-Wash</p>
+          <Col xs={12} lg={4} className='pt-3'>
+            <span className='fs_24 red_ff m font-semibold Usage-text-color'>Usage Category</span>
+            <Row xs={2} md={2} className="g-2 mt-1">
+              <Col lg={6} xs={6} className="p-2  ">
+                <div className='border border-color ps-3 pt-3 pb-2 text-dark me-2 Usage-Category-box'>
+                  <p >Car-Wash</p>
                   <Image src={Group} alt="Car-Wash" />
                   <p className='fs_20 fw-semibold red_ff pt-3 text-dark'>$116</p>
                 </div>
               </Col>
               <Col lg={6} xs={6} className="p-2">
-                <div className='border text-dark border-color ps-3 pt-2  text-nowrap'>
+                <div className='border text-dark border-color ps-3 pb-2 pt-3 text-nowrap me-2 Usage-Category-box'>
                   <p>Laundry Shop</p>
                   <Image src={Group} alt="Laundry Shop" />
                   <p className='fs_20 fw-semibold red_ff pt-3 text-dark'>$116</p>
                 </div>
               </Col>
               <Col lg={6} xs={6} className="p-2">
-                <div className='border border-color ps-3 pt-2  text-dark text-nowrap'>
+                <div className='border border-color ps-3 pt-3 pb-2 text-dark text-nowrap me-2 Usage-Category-box'>
                   <p>Valet Service</p>
                   <Image src={Group} alt="Valet Service" />
                   <p className='fs_20 fw-semibold red_ff pt-3 text-dark'>$116</p>
                 </div>
               </Col>
               <Col lg={6} xs={6} className="p-2">
-                <div className='border border-color ps-2 pt-2  text-dark'>
+                <div className='border border-color ps-2 pt-3 pb-2 text-dark me-2 Usage-Category-box'>
                   <p>Ping-Pong</p>
                   <Image src={Group} alt="Ping-Pong" />
                   <p className='fs_20 fw-semibold red_ff pt-3 text-dark'>$116</p>
@@ -178,4 +182,3 @@ const Usages: React.FC = () => {
 };
 
 export default Usages;
-

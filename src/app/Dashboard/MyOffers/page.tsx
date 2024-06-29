@@ -26,7 +26,7 @@ const Myoffer = () => {
     <>
       <Layout>
         <Container className='w-100 p-0 m-0'>
-          <Row className='pe-2'>
+          <Row className='pe-2 mt-3'>
             <div className='d-none d-md-block'>
               <Image className='w-100 ' src={banner} alt="Banner" onClick={handleModalOpen} />
             </div>

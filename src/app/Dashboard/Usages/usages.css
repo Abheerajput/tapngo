@@ -10,13 +10,43 @@
   border: none;
 }
 
+.Usage-Category-box{
+  height:170px !important ;
+  width:194 !important ;
+}
+.Usage-text-color{
+  color: #202020 !important;
+}
+.List-text-color{
+  color: #000000 !important ;
+}
 .table td {
   text-align: center; 
   vertical-align: middle; 
   padding: 10px;
   border: none; 
 }
+.Usage-active {
+  color: #007bff;
+  border-bottom: 3px solid #007bff !important; /* blue color */
+  padding-bottom: 0.5px;
+}
+#bar-chart{
+  height: 322px !important;
+  margin-top: -13px !important;
+  padding-right: 15px !important ;
+  padding-left: 15px !important ;
+}
+@media (min-width:768px) {
+  .Usage-gap-lg-2{
+    gap: 0px !important;
+  }
+}
 
+
+.Usage-custom-margin{
+  margin-top: 4px !important;
+}
 .table .action {
   margin: 0;
 }

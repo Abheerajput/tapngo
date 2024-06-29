@@ -57,44 +57,48 @@ const Subscription = () => {
 
   return (
     <>
-    <Layout>
-    <div className='rounded-2 p-md-4 p-3 mt-4 bg-white'>
-        <Row className="align-items-center">
-          <Col xs={12} className='ms-md-2'>
-            <h1 className='fs_24 fw-semibold pt-md-3 red_ff text-dark'>Subscription</h1>
-            <p className='fs_16 mb-md-4 mb-0 pt-1 red_ff text-dark '>Take your desired plan to get access to our content easily,<br /> we  like to offer special license offer to our users.</p>
-          </Col>
-        </Row>
-        <Row className="justify-content-center p-2">
-          {data.map((row, index) => (
-            <Col key={index} sm={6} xl={3} className="mb-4 px-1 px-md-2 ">
-              <Card className="bg-color p-md-3 h-100 border-0"  >
-                <Card.Body className='d-flex flex-column justify-content-between'>
-                  <div>
-                  <Card.Title className="fs_20 fw-medium red_ff ">{row.heading}</Card.Title>
-                  <div className='d-flex align-items-end mar-bot-2'>
-                    <p className="fs_40 mb-0 fw-semibold red_ff" >{row.price}</p>
-                    <p className="mb-2">{row.month}</p>
-                  </div>
-                  <hr />
-                  <Card.Text>
-                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="tick" width={20} />{row.info}</p>
-                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="tick"  width={20} />{row.info1}</p>
-                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="tick"  width={20} />{row.info2}</p>
-                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="tick" width={20}  />{row.info3}</p>
-                    <p className="d-flex gap-md-3 gap-2 red_ff "><Image src={Tick} alt="tick" width={20} />{row.info4}</p>
-                  </Card.Text>
-                  </div>
-                  <div className='d-flex justify-content-center mt-5 pt-5 red_ff'>
-                    <Button variant="primary" className='w-100'>{row.plan}</Button>
-                    {row.isActive}
-                  </div>
-                </Card.Body>
-              </Card>
+      <Layout>
+        <div className='rounded-2 p-md-4 p-3 mt-4 bg-white'>
+          <Row className="align-items-center">
+            <Col xs={12} className='ms-md-2'>
+              <h1 className='fs_24 fw-semibold pt-md-3 red_ff dashboard-text-color'>Subscription</h1>
+              <p className='fs_16 mb-md-4 fw-normal mb-0 pt-1 red_ff sub-text-color '>Take your desired plan to get access to our content easily,<br /> we  like to offer special license offer to our users.</p>
             </Col>
-          ))}
-        </Row>
-      </div>
+          </Row>
+          <Row className="justify-content-center p-2">
+            {data.map((row, index) => (
+              <Col key={index} sm={6} xl={3} className="mb-4 px-1 px-md-2 ">
+                <Card className="bg-color p-md-3 h-100 border-0"  >
+                  <Card.Body className='d-flex flex-column justify-content-between'>
+                    <div>
+                      <Card.Title className="fs_20 fw-medium red_ff dashboard-text-color    ">{row.heading}</Card.Title>
+                      <div className='d-flex align-items-end mar-bot-2 mb-2'>
+                        <p className="fs_40 mb-0 fw-medium red_ff dashboard-text-color" >{row.price}</p>
+                        <p className="mb-2 fs_16 red_ff fw-normal dashboard-text-color">{row.month}</p>
+                      </div>
+                      <hr />
+                      <Card.Text className='pt-3'>
+                        <p className="d-flex gap-md-3 gap-2 pt-3 red_ff fs_16 fw-normal dashboard-text-color "><Image src={Tick} alt="tick" width={20} />{row.info}</p>
+                        <p className="d-flex gap-md-3 gap-2  pt-3 red_ff fs_16 fw-normal dashboard-text-color "><Image src={Tick} alt="tick" width={20} />{row.info1}</p>
+                        <p className="d-flex gap-md-3 gap-2 pt-3 red_ff fs_16 fw-normal dashboard-text-color "><Image src={Tick} alt="tick" width={20} />{row.info2}</p>
+                        <p className="d-flex gap-md-3 gap-2 pt-3 red_ff fs_16 fw-normal dashboard-text-color"><Image src={Tick} alt="tick" width={20} />{row.info3}</p>
+                        <p className="d-flex gap-md-3 gap-2 pt-3 red_ff fs_16 fw-normal dashboard-text-color"><Image src={Tick} alt="tick" width={20} />{row.info4}</p>
+                      </Card.Text>
+                    </div>
+                    <div className='d-flex justify-content-center mt-5 pt-5 red_ff'>
+                      <Button variant="primary" className='w-100 '>{row.plan}</Button>
+                      {/* {index === 0 && row.isActive && (
+                        <div className='fs_14 w-100  current-plan-bg'>
+                          Current Plan
+                        </div>
+                      )} */}
+                    </div>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </div>
       </Layout>
     </>
   );

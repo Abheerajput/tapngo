@@ -24,7 +24,7 @@ const TicketModal: React.FC<TicketModalProps> = ({ show, handleClose }) => {
   return (
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
-        <Modal.Title>Raise Ticket</Modal.Title>
+        <Modal.Title className='dashboard-text-color'>Raise Ticket</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <Form>

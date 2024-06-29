@@ -6,7 +6,12 @@
 .bg-lightblue{
     background-color: #E7F0FE;
 }
-
+.light-text-color{
+  color:#525458;
+}
+.dashboard-text-color{
+  color: #202020;
+}
 .border-color{
     border: 1px solid #D9D9D9;
     border-radius: 4px;
@@ -25,9 +30,7 @@
   height: 54px;
   width: 54px;
 }
-.font-color1{
-   color: #202020BF;
-}
+
 .bg-0{
   background-color: #FF8282 ;
   border: 2px solid #A02121;
