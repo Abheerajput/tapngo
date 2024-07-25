@@ -1,137 +1,188 @@
-"use client"
-import ReactApexChart from 'react-apexcharts';
-import dynamic from 'next/dynamic';
+"use client";
+import React, { useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
-import { useEffect } from 'react';
-import { ApexOptions } from 'apexcharts';
 import UsagesList from './UsagesList';
+import Chart from "chart.js";
 import Group from "../../../../public/assets/images/svg/Group.svg";
 import Layout from '@/app/components/Layout/Laytout';
 
+declare global {
+  interface Window {
+    myBar: Chart;
+  }
+}
+
 const Usages: React.FC = () => {
+  const [year, setYear] = useState(new Date().getFullYear());
 
- 
-  
-//   const barSeries = [
-//     {
-//       name: 'Net Profit',
-//       data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
-//       color: '#1364F1',
-//     },
-//     {
-//       name: 'Revenue',
-//       data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
-//       color: '#FFCA00',
-//     },
-//   ];
+  useEffect(() => {
+    const config = {
+      type: "bar",
+      data: {
+        labels: [
+          "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+          "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+        ],
+        datasets: [
+          {
+            label: "Top-Up",
+            backgroundColor: "#FFCA00",
+            data: [90, 20, 130, 80, 50, 90, 30, 60, 90, 20, 80, 30],
+            barThickness: 20,
+          },
+          {
+            label: "Spending",
+            backgroundColor: "#1364F1",
+            data: [110, 80, 140, 120, 140, 110, 70, 80, 120, 120, 100, 70],
+            barThickness: 20,
+          },
+        ],
+      },
+      options: {
+        maintainAspectRatio: false,
+        responsive: true,
+        title: {
+          display: false,
+          text: "Usage Chart",
+        },
+        tooltips: {
+          mode: "index",
+          intersect: false,
+        },
+        hover: {
+          mode: "nearest",
+          intersect: true,
+        },
+        legend: {
+          labels: {
+            fontColor: "rgba(0,0,0,.7)",
+          },
+          align: "start",
+          position: "top",
+        },
+        scales: {
+          xAxes: [
+            {
+              display: true,
+             
+              gridLines: {
+                display: false,
+              },
+              ticks: {
+                fontColor: "rgba(0,0,0,.7)",
+              },
+            },
+          ],
+          yAxes: [
+            {
+              display: true,
+              scaleLabel: {
+                display: false,
+                labelString: "Value",
+              },
+              gridLines: {
+                display: true,
+              },
+              ticks: {
+                beginAtZero: true,
+                suggestedMax: 160,
+                callback: function(value) {
+                  return '$' + value;
+                },
+              },
+            },
+          ],
+        },
+      },
+    };
 
-//   const barOptions: ApexOptions = {
-//     chart: {
-//       type: 'bar',
-//       height: 356,
-//       toolbar: {
-//         show: false,
-//       },
-//     },
-//     plotOptions: {
-//       bar: {
-//         horizontal: false,
-//         columnWidth: '55%',
-//       },
-//     },
-//     dataLabels: {
-//       enabled: false,
-//     },
-//     stroke: {
-//       show: true,
-//       width: 2,
-//       colors: ['transparent'],
-//     },
-//     xaxis: {
-//       categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
-//       labels: {
-//         show: true,
-//         style: {
-//           fontSize: '10px',
-//         },
-//       },
-//     },
-//     fill: {
-//       opacity: 1,
-//     },
-//     tooltip: {
-//       y: {
-//         formatter: function (val) {
-//           return "$ " + val + " thousands";
-//         },
-//       },
-//     },
-//     annotations: {
-//       xaxis: [],
-//     },
-//     legend: {
-//       position: 'top',
-//       horizontalAlign: 'left',
-//     },
-//   };
-
-// if (typeof window == "undefined") {
-//    return;
-// }
+    const ctx = document.getElementById("bar-chart") as HTMLCanvasElement | null;
+    if (ctx) {
+      const context = ctx.getContext("2d");
+      if (context) {
+        if (window.myBar) window.myBar.destroy();  
+        window.myBar = new Chart(context, config);
+      }
+    }
+  }, [year]);
 
   return (
-    // <Layout>
-    //   <div className='bg-white custom-padding rounded-2'>
-    //     <Row>
-    //       <Col xs={12} md={8}>
-    //         <span className='fs_24 fw-semibold red_ff text-dark'>Spending Overview</span>
-    //         <div className='p-2'>
-    //           <div className="chart-container">
-    //             <ReactApexChart options={barOptions} series={barSeries} type="bar" height={350} />
-    //           </div>
-    //         </div>
-    //       </Col>
-    //       <Col xs={12} lg={4}>
-    //         <span className='fs_24 fw-semibold red_ff text-dark'>Usage Category</span>
-    //         <Row xs={2} md={2} className="g-2">
-    //           <Col lg={6} xs={6} className="p-2">
-    //             <div className='border border-color ps-3 pt-2 p-3 text-dark'>
-    //               <p>Car-Wash</p>
-    //               <Image src={Group} alt="Car-Wash" />
-    //               <p className='fs_20 fw-semibold red_ff pt-3 text-dark'>$116</p>
-    //             </div>
-    //           </Col>
-    //           <Col lg={6} xs={6} className="p-2">
-    //             <div className='border text-dark border-color ps-3 pt-2 p-3 text-nowrap'>
-    //               <p>Laundry Shop</p>
-    //               <Image src={Group} alt="Laundry Shop" />
-    //               <p className='fs_20 fw-semibold red_ff pt-3 text-dark'>$116</p>
-    //             </div>
-    //           </Col>
-    //           <Col lg={6} xs={6} className="p-2">
-    //             <div className='border border-color ps-3 pt-2 p-3 text-dark text-nowrap'>
-    //               <p>Valet Service</p>
-    //               <Image src={Group} alt="Valet Service" />
-    //               <p className='fs_20 fw-semibold red_ff pt-3 text-dark'>$116</p>
-    //             </div>
-    //           </Col>
-    //           <Col lg={6} xs={6} className="p-2">
-    //             <div className='border border-color ps-2 pt-2 p-3 text-dark'>
-    //               <p>Ping-Pong</p>
-    //               <Image src={Group} alt="Ping-Pong" />
-    //               <p className='fs_20 fw-semibold red_ff pt-3 text-dark'>$116</p>
-    //             </div>
-    //           </Col>
-    //         </Row>
-    //       </Col>
-    //     </Row>
-    //     <UsagesList />
-    //   </div>
-    // </Layout>
-    <></>
+    <Layout>
+      <div className='px-3'>
+
+     
+      <div className="bg-white mt-3 custom-padding rounded-2">
+        <Row>
+          <Col xs={12} md={8}>
+            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 rounded">
+              <div className="rounded-t mb-0 px-4 py-3 bg-transparent">
+                <div className="d-flex justify-content-between align-items-center">
+                  <p className="fs_24 red_ff mb-1 font-semibold Usage-text-color">
+                    Spending Overview
+                  </p>
+                
+                </div>
+              </div>
+              <div className=" border border-1 flex-auto">
+                {/* Chart */}
+                <div className='relative d-flex justify-content-end mt-3 pe-2 '>
+                <select 
+                    className="form-select w-auto" 
+                    value={year} 
+                    onChange={(e) => setYear(Number(e.target.value))}
+                  >
+                    {[2024, 2023, 2022].map(y => (
+                      <option key={y} value={y}>{y}</option>
+                    ))}
+                  </select>
+                </div>
+               
+                <div className="relative h-350-px">
+                  <canvas id="bar-chart"></canvas>
+                </div>
+              </div>
+            </div>
+          </Col>
+          <Col xs={12} lg={4} className='pt-3'>
+            <span className='fs_24 red_ff m font-semibold Usage-text-color'>Usage Category</span>
+            <Row xs={2} md={2} className="g-2 mt-1">
+              <Col lg={6} xs={6} className="p-2  ">
+                <div className='border border-color ps-3 pt-3 pb-2 text-dark me-2 Usage-Category-box'>
+                  <p >Car-Wash</p>
+                  <Image src={Group} alt="Car-Wash" />
+                  <p className='fs_20 fw-semibold red_ff pt-3 text-dark'>$116</p>
+                </div>
+              </Col>
+              <Col lg={6} xs={6} className="p-2">
+                <div className='border text-dark border-color ps-3 pb-2 pt-3 text-nowrap me-2 Usage-Category-box'>
+                  <p>Laundry Shop</p>
+                  <Image src={Group} alt="Laundry Shop" />
+                  <p className='fs_20 fw-semibold red_ff pt-3 text-dark'>$116</p>
+                </div>
+              </Col>
+              <Col lg={6} xs={6} className="p-2">
+                <div className='border border-color ps-3 pt-3 pb-2 text-dark text-nowrap me-2 Usage-Category-box'>
+                  <p>Valet Service</p>
+                  <Image src={Group} alt="Valet Service" />
+                  <p className='fs_20 fw-semibold red_ff pt-3 text-dark'>$116</p>
+                </div>
+              </Col>
+              <Col lg={6} xs={6} className="p-2">
+                <div className='border border-color ps-2 pt-3 pb-2 text-dark me-2 Usage-Category-box'>
+                  <p>Ping-Pong</p>
+                  <Image src={Group} alt="Ping-Pong" />
+                  <p className='fs_20 fw-semibold red_ff pt-3 text-dark'>$116</p>
+                </div>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+        <UsagesList />
+      </div>
+      </div>
+    </Layout>
   );
 };
 
 export default Usages;
-

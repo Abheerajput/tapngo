@@ -14,10 +14,10 @@ interface ModalComponentProps {
 const ModalComponent: React.FC<ModalComponentProps> = ({ show, handleClose, handleSubmit }) => {
   return (
     <Modal show={show} onHide={handleClose}>
-      <Modal.Header closeButton className='border-0'>
+      <Modal.Header closeButton className='border-0 m-0 p-0 pt-4 pe-4'>
       </Modal.Header>
       <Modal.Body>
-        <Modal.Title className='fs-18 red_ff d-flex justify-content-center pb-5 mb-3'>Add Family Member</Modal.Title>
+        <Modal.Title className='fs_24 red_ff d-flex justify-content-center dashboard-text-color pb-2 mb-2 fw-semibold'>Add Family Member</Modal.Title>
         <Form onSubmit={handleSubmit} className='mx-3'>
           <Form.Group as={Row} className="mb-3" controlId="formCardNumber">
             <Form.Label className='fs-18 red_ff p-0 m-0 pb-2 text-dark'>
@@ -34,10 +34,10 @@ const ModalComponent: React.FC<ModalComponentProps> = ({ show, handleClose, hand
           </Form.Group>
 
           <Form.Group as={Row} className="mb-3" controlId="formRelation">
-            <Form.Label className='fs-18 red_ff p-0 m-0 pb-2 text'>
+            <Form.Label className='fs-18 red_ff p-0 m-0 pb-2 text dashboard-text-color'>
               Relation to You
             </Form.Label>
-            <Form.Select className='py-2 fw-semibold' aria-label="Select Relation">
+            <Form.Select className='py-2 fw-semibold red_ff' aria-label="Select Relation">
               <option className='fw-Semibold'>Son</option>
               <option value="spouse">Spouse</option>
               <option value="child">Child</option>
@@ -47,7 +47,7 @@ const ModalComponent: React.FC<ModalComponentProps> = ({ show, handleClose, hand
             </Form.Select>
           </Form.Group>
 
-          <Form.Group as={Row} className="mb-3 d-flex" controlId="formTwoWaySync">
+          <Form.Group as={Row} className="mb-3 d-flex dashboard-text-color" controlId="formTwoWaySync">
             <Form.Label column sm={4}>
               Two way sync <img src={exclamation} alt="" />
             </Form.Label>

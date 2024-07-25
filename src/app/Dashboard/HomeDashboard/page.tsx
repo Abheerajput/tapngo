@@ -31,36 +31,38 @@ const Home: React.FC = () => {
 
   return (
     <Layout>
+<div className="px-2">
+
 
       <div className="py-4 ">
         <Row>
           <Col xl={7}>
             <Row >
-              <Col md={6} className="mt-4  mt-md-0 ">
+              <Col md={7} className="  mt-md-0  rounded-2 ">
                 <div className="card pt-4  d-flex flex-column justify-content-between h-100 p-md-4 p-3 border-0">
                   <div>
-                    <p className="fs_20 red_ff mb-0">Current Balance</p>
+                    <p className="fs_20 red_ff fw-normal mb-0 dashboard-text-color">Current Balance</p>
                     <h3 className="fs_40 red_ff fw-bold">$116.30</h3>
                   </div>
                   <div className="d-flex align-items-end justify-content-between">
                     <div>
-                      <p className="fs_16 red_ff mb-0">Current Balance</p>
-                      <h3 className="fs_20 red_ff mb-0 fw-semibold">
+                      <p className="fs_18 red_ff mb-0 fw-normal dashboard-text-color">Card Number</p>
+                      <h3 className="fs_24 red_ff mb-0 fw-semibold">
                         046 8311 6661
                       </h3>
                     </div>
                     <div className="d-flex gap-2 align-items-center">
-                      <Image src={qus_icon} alt="qus_icon" onClick={handleShowModal} style={{ cursor: "pointer" }} />
-                      <Image src={dowload_icon} alt="dowload_icon" />
+                      <Image src={qus_icon} alt="qus_icon" onClick={handleShowModal} style={{ cursor: "pointer",width:"46px",height:"46px" }} />
+                      <Image src={dowload_icon} alt="dowload_icon" style={{width:"46px",height:"46px" }}  />
                     </div>
                   </div>
                 </div>
               </Col>
 
-              <Col md={6} className="mt-4  mt-md-0 ">
+              <Col md={5} className="mt-4  mt-md-0  rounded-2 ">
                 <div className="card  d-flex flex-column justify-content-between h-100 p-md-4 p-3 border-0">
-                  <div className="d-flex justify-content-between align-items-center">
-                    <p className="fs_24 red_ff fw-semibold mb-0">Summary</p>
+                  <div className="d-flex justify-content-between align-items-center pb-4">
+                    <p className="fs_24 red_ff fw-semibold dashboard-text-color mb-0">Summary</p>
                     <Form.Select
                       className="w-25 py-1"
                       aria-label="Default select example"
@@ -71,16 +73,16 @@ const Home: React.FC = () => {
                       <option value="3">Three</option>
                     </Form.Select>
                   </div>
-                  <div className="d-flex align-items-center justify-content-between">
-                    <Image src={cercle_Image} alt="cercle_Image" />
+                  <div className="d-flex align-items-center  justify-content-between">
+                    <Image src={cercle_Image} alt="cercle_Image"  />
                     <div>
                       <div className="d-flex align-items-center gap-1">
                         <Image src={blue_image} alt="blue_image" />
-                        <p className="mb-0">Auto</p>
+                        <p className="mb-0 fs_13 dashboard-text-color">Auto</p>
                       </div>
                       <div className="d-flex mt-3 align-items-center gap-1">
                         <Image src={yellow_image} alt="yellow_image" />
-                        <p className="mb-0">Manual</p>
+                        <p className="mb-0 fs_13 dashboard-text-color">Manual</p>
                       </div>
                     </div>
                   </div>
@@ -89,61 +91,70 @@ const Home: React.FC = () => {
               <Col xs={12} className="mt-4">
                 <div className="card p-md-4 p-3 border-0">
                   <div className="d-flex justify-content-between align-items-center">
-                    <h5 className="fs_24 fw-semibold source_ff">Recent Usage</h5>
-                    <a className="tdn fw-semibold red_ff" href="#">
+                    <h5 className="fs_24 dashboard-text-color fw-semibold source_ff">Recent Usage</h5>
+                    <a className="tdn fw-semibold red_ff " href="#">
                       View All
                     </a>
                   </div>
                   <div className="d-flex mt-3 justify-content-between align-items-center">
                     <div>
-                      <p className="mb-0 fs_16 red_ff fw-normal">
+                      <p className="mb-0 fs_16 red_ff dashboard-text-color fw-normal">
                         Manual Recharge
                       </p>
                       <p className="mb-0 red_ff fs_14 text-color">04 January 2024</p>
                     </div>
-                    <h6 className="fs_20 red_ff fw-semibold mb-0">$1.33</h6>
+                    <p className="fs_20 red_ff fw-semibold mb-0  dashboard-text-color">$1.33</p>
                   </div>
                   <div className="border mt-3"></div>
                   <div className="d-flex mt-3 justify-content-between align-items-center">
                     <div>
-                      <p className="mb-0 fs_16 red_ff fw-normal">
+                      <p className="mb-0 fs_16 dashboard-text-color red_ff fw-normal">
                         Auto Top-Up
                       </p>
                       <p className="mb-0 red_ff fs_14 text-color">04 January 2024</p>
                     </div>
-                    <h6 className="fs_20 red_ff fw-semibold mb-0">$1.33</h6>
+                    <p className="fs_20 red_ff fw-semibold mb-0 dashboard-text-color">$103.21</p>
                   </div>
                   <div className="border mt-3"></div>
                   <div className="d-flex mt-3 justify-content-between align-items-center">
                     <div>
-                      <p className="mb-0 fs_16 red_ff fw-normal">
+                      <p className="mb-0 dashboard-text-color fs_16 red_ff fw-normal">
                         Manual Recharge
                       </p>
                       <p className="mb-0 red_ff fs_14 text-color">04 January 2024</p>
                     </div>
-                    <h6 className="fs_20 red_ff fw-semibold mb-0">$1.33</h6>
+                    <p className="fs_20 red_ff fw-semibold mb-0 dashboard-text-color">$2.36</p>
                   </div>
                   <div className="border mt-3"></div>
                   <div className="d-flex mt-3 justify-content-between align-items-center">
                     <div>
-                      <p className="mb-0 fs_16 red_ff fw-normal">
+                      <p className="mb-0 dashboard-text-color fs_16 red_ff fw-normal">
                         Manual Recharge
                       </p>
                       <p className="mb-0 red_ff fs_14 text-color">04 January 2024</p>
                     </div>
-                    <h6 className="fs_20 red_ff fw-semibold mb-0">$1.33</h6>
+                    <p className="fs_20 red_ff fw-semibold mb-0 dashboard-text-color">$1.36</p>
                   </div>
                   <div className="border mt-3"></div>
                   <div className="d-flex mt-3 justify-content-between align-items-center">
                     <div>
-                      <p className="mb-0 fs_16 red_ff fw-normal">
+                      <p className="mb-0 dashboard-text-color fs_16 red_ff fw-normal">
                         Auto Top-Up
                       </p>
                       <p className="mb-0 red_ff fs_14 text-color">04 January 2024</p>
                     </div>
-                    <h6 className="fs_20 red_ff fw-semibold mb-0">$1.33</h6>
+                    <p className="fs_20 red_ff fw-semibold mb-0 dashboard-text-color">$5.45</p>
                   </div>
                   <div className="border mt-3"></div>
+                  <div className="d-flex mt-3 justify-content-between align-items-center">
+                    <div>
+                      <p className="mb-0 dashboard-text-color fs_16 red_ff fw-normal">
+                        Auto Top-Up
+                      </p>
+                      <p className="mb-0 red_ff fs_14 text-color">04 January 2024</p>
+                    </div>
+                    <p className="fs_20 red_ff fw-semibold mb-0 dashboard-text-color">$5.45</p>
+                  </div>
                 </div>
               </Col>
             </Row>
@@ -152,19 +163,20 @@ const Home: React.FC = () => {
             <div className="card  h-100 border-0 p-md-4 p-3">
               <div className="d-sm-flex justify-content-between align-items-center">
                 <span className="d-flex gap-2">
-                  <h4 className="fs_24 fw-semibold red_ff" > Recharge Prepaid </h4>
+                  <p className="fs_24 fw-semibold red_ff  dashboard-text-color" > Prepaid Recharge </p>
                 </span>
-                <div className="d-flex mt-3 mt-sm-0 align-items-center gap-3">
+                <div className="d-flex mt-3 mt-sm-0 text-color align-items-center gap-3">
                   <p >Auto Top-up</p>
-                  <div className="border rounded-5 m-0 ">
+                  <div className="border rounded-5 mb-3 m-0 ">
 
 
-                    <Form className="border-1 rounded-1 py-2 px-2 d-flex justify-content-center">
+                    <Form className="border-1  rounded-1  ps-1 pe-2 d-flex justify-content-center">
                       <Form.Check
                         type="switch"
+                        
                         id="custom-switch"
                         label={
-                          <span>
+                          <span >
                             {toggleState ? 'On' : 'Off'}
                           </span>
                         }
@@ -177,7 +189,7 @@ const Home: React.FC = () => {
                 </div>
               </div>
 
-              <Row className="mt-4">
+              <Row className="mt-4 mb-2">
                 <Col
                   xs={4}
                   className="pe-0 text-center"
@@ -186,16 +198,16 @@ const Home: React.FC = () => {
                   <Nav.Link
                     href="#"
                     className={
-                      selectedTab === "Manual" ? "active-tab color_blue" : ""
+                      selectedTab === "Manual" ? " border_radius_blue color_blue" : ""
                     }
                   >
                     <h3 className="red_ff fs_16">Manual</h3>
                   </Nav.Link>
                   {selectedTab === "Manual" ? (
-                    <div className="mt-2 custom_border border-body border-1 border"></div>
+                    <div className="mb-2   border"></div>
                   ) : (
                     <>
-                      <div className="mt-2  border-body border-1 border"></div>
+                      <div className="    border"></div>
                     </>
                   )}
                 </Col>
@@ -207,16 +219,16 @@ const Home: React.FC = () => {
                   <Nav.Link
                     href="#"
                     className={
-                      selectedTab === "Auto" ? "active-tab color_blue" : ""
+                      selectedTab === "Auto" ? " border_radius_blue color_blue" : ""
                     }
                   >
                     <h3 className="red_ff fs_16">Auto</h3>
                   </Nav.Link>
                   {selectedTab === "Auto" ? (
-                    <div className="mt-2 custom_border border-1 border"></div>
+                    <div className="mb-3  border"></div>
                   ) : (
                     <>
-                      <div className="mt-2  border-body border-1 border"></div>
+                      <div className="mt-2  border"></div>
                     </>
                   )}
                 </Col>
@@ -229,17 +241,17 @@ const Home: React.FC = () => {
                     href="#"
                     className={
                       selectedTab === "Subscription"
-                        ? "active-tab color_blue"
+                        ? "active-tab border_radius_blue color_blue"
                         : ""
                     }
                   >
                     <h3 className="red_ff fs_16">Subscription</h3>
                   </Nav.Link>
                   {selectedTab === "Subscription" ? (
-                    <div className="mt-2 custom_border border-1 border"></div>
+                    <div className="mb-3   border"></div>
                   ) : (
                     <>
-                      <div className="mt-2  border-body border-1 border"></div>
+                      <div className="mt-2   border"></div>
                     </>
                   )}
                 </Col>
@@ -280,6 +292,7 @@ const Home: React.FC = () => {
             </Modal.Body>
           </Modal>
         </div>
+      </div>
       </div>
     </Layout>
   );

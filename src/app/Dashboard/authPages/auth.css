@@ -1,5 +1,5 @@
 .custom_auth_header_width {
-  max-width: 600px;
+  max-width: 400px;
   padding: 0 12px;
   width: 100%;
 }
@@ -52,5 +52,62 @@ input {
   }
   .modal-dialog {
     padding: 0px;
+  }
+}
+/* Add this to your custom CSS file */
+.custom-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.custom-form-group {
+  margin-bottom: 1rem;
+}
+
+.custom-button {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.custom-link {
+  color: blue;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.custom-link:hover {
+  text-decoration: underline;
+}
+
+.custom-paragraph {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: #555;
+}
+
+@media (max-width: 576px) {
+  .custom-container {
+    padding: 1rem;
+  }
+
+  .custom-form-group {
+    margin-bottom: 0.75rem;
+  }
+
+  .custom-button {
+    margin-top: 1rem;
+  }
+
+  .custom-checkbox {
+    font-size: 0.875rem;
   }
 }

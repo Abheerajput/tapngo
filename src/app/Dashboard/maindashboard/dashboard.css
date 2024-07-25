@@ -4,7 +4,9 @@
 .custom-background{
   background-color: #F0F0F1;
 }
-
+.active-color{
+  background-color: #021536;
+}
 .logo {
   height: 32px;
   margin: 16px;

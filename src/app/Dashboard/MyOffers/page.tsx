@@ -25,9 +25,12 @@ const Myoffer = () => {
   return (
     <>
       <Layout>
-        <Container className='w-100 p-0 m-0'>
-          <Row className='pe-2'>
-            <div className='d-none d-md-block'>
+        <div className='px-3 '>
+
+        <div className=' bg-white rounded-3'>
+        <Container className='w-100 p-0 m-0 rounded-3'>
+          <Row className='pe-2 mt-3 '>
+            <div className='d-none d-md-block ps-4'>
               <Image className='w-100 ' src={banner} alt="Banner" onClick={handleModalOpen} />
             </div>
             <div className='d-block d-md-none'>
@@ -73,6 +76,8 @@ const Myoffer = () => {
             </Modal.Footer>
           </Modal>
         </Container>
+        </div>
+        </div>
       </Layout>
     </>
   );

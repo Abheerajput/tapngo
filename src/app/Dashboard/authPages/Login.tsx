@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Login = () => {
   return (
-    <Container className="mt-4">
+    <Container className="mt-4 ">
       <Row className="justify-content-center">
         <Form>
           <Form.Group controlId="formCorporateCard" className="mb-3">
@@ -50,7 +50,7 @@ const Login = () => {
         <footer className="mt-3">
           <p className="red_ff color_lightblack fw-medium fs-14">
             Forgot Credentials?&nbsp;
-            <Link href="/forgot-credential" className="color_blue">
+            <Link href="/Dashboard/ForgotCredential" className="color_blue">
               Click here!
             </Link>
           </p>

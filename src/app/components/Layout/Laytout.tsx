@@ -10,13 +10,14 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
-        <Container fluid className='custom-bg'>
-            <Row className='w-100 d-flex justify-content-center '>
-                <Col xs={12} md={2} >
+        <Container fluid className='header-background-color px-0 '>
+            <Row className=''>
+                <Col xs={12} lg={2}  >
                     <Admindashboard/>
                 </Col>
-                <Col xs={12} md={10}>
-                    <Navbar />
+                {/* <Col lg={1} xl={1} xxl={1} className='d-xxl-none d-xl-block '></Col> */}
+                <Col xs={12} lg={12}  className='header-background-color custom-right-margin'>
+                    <Navbar /> 
                     {children}
                 </Col>
             </Row>

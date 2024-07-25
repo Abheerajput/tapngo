@@ -39,9 +39,9 @@ const Navbar = () => {
 
     return (
         <div>
-            <Layout className="site-layout custom-background">
-                <Header className="site-layout-background p-0 m-0 w-100 header-responsive custom-background px-3">
-                    <div className="d-flex align-items-center custom-backgound">
+            <Layout className="site-layout custom-background custom_nav_padding ">
+                <Header className="header-background-color  mt-lg-4 p-0 m-0 res-bg w-100 header-responsive custom-background">
+                    <div className="d-flex align-items-center ms-2  custom-backgound">
                         <Image
                             className="pe-3 menu-button"
                             onClick={showDrawer}
@@ -60,12 +60,12 @@ const Navbar = () => {
                             />
                         </Link>
                     </div>
-                    <div className="d-lg-flex align-items-center d-flex custom-bg res-bg w-100 justify-content-between">
-                        <div className="d-none d-md-flex d-sm-none ">
-                            <h6 className="mb-0 fs_14 fw-normal red_ff">Hey!</h6>
-                            <h4 className="mb-0 fs_24 red_ff mt-1 text-nowrap">Andrew J.</h4>
+                    <div className="d-lg-flex align-items-center full-width  d-flex  header-background-color  w-100 pt-1  justify-content-between">
+                        <div className="d-none d-lg-block d-sm-none ">
+                            <h6 className="mb-0 fs_20  fw-normal red_ff">Hey!</h6>
+                            <h4 className="mb-0 fs_24 fw-semibold red_ff mt-1 text-nowrap">Andrew J.</h4>
                         </div>
-                        <div className="d-flex gap-4 align-items-center w-100 res-bg  justify-content-end">
+                        <div className="d-flex gap-4 align-items-center w-100 res-bg pe-2  justify-content-end" style={{marginTop:"-11px"}}>
                             <Form.Select
                                 className="rounded-5 d-none d-md-flex w-20"
                                 aria-label="Default select example"
@@ -80,7 +80,7 @@ const Navbar = () => {
                                     <Image src={noti_icon} alt="noti_icon" width={40} height={40} />
                                 </Link>
                             </div>
-                            <div className="d-flex align-items-center gap-1 line-height border py-1 px-2 bg-white rounded-5">
+                            <div className="d-flex align-items-center gap-1 line-height border py-1   pe-2 bg-white rounded-5">
                                 <div>
                                     <Link href="/Dashboard/Profile">
                                         <Image src={profile} alt="profile" width={38} height={33} />
@@ -101,12 +101,12 @@ const Navbar = () => {
                     visible={drawerVisible}
                     className="drawer-responsive bg-sidebar w-75"
                 >
-                    <div className="d-flex align-items-center justify-content-between bg-sidebar">
+                    <div className="d-flex align-items-center justify-content-between bg-sidebar m-0 p-0">
                         <Link href="#">
-                            <Image width={130} className="pt-4 pt-lg-0 ps-4 pb-2" src={logo} alt="logo" />
+                            <Image width={130} className=" pt-lg-0 ps-4 " src={logo} alt="logo" />
                         </Link>
                         <a href="#">
-                            <Image onClick={onCloseDrawer} width={90} className="px-3 pt-4 pt-lg-0 px-4 pb-2" src={close_icon} alt="close_icon" />
+                            <Image onClick={onCloseDrawer} width={90} className="px-3  pt-lg-0 px-4 " src={close_icon} alt="close_icon" />
                         </a>
                     </div>
 
@@ -114,7 +114,7 @@ const Navbar = () => {
                         <Menu.Item key="1">
                             <Link href="/Dashboard/HomeDashboard">
                                 <div className="d-flex gap-2 align-items-center">
-                                    <Image src={home_icon} alt="home_icon" width={24} height={24} />
+                                    <Image src={home_icon} alt="home_icon" width={20} height={20} />
                                     <span className="mb-0 fs_14 red_ff">Home</span>
                                 </div>
                             </Link>
@@ -122,7 +122,7 @@ const Navbar = () => {
                         <Menu.Item key="2">
                             <Link href="/Dashboard/Usages">
                                 <div className="d-flex gap-2 align-items-center">
-                                    <Image src={usage_icon} alt="usage_icon" width={24} height={24} />
+                                    <Image src={usage_icon} alt="usage_icon" width={20} height={20} />
                                     <span className="mb-0 fs_14 red_ff">Usage</span>
                                 </div>
                             </Link>
@@ -130,7 +130,7 @@ const Navbar = () => {
                         <Menu.Item key="3" onClick={() => handleMenuClick('3')}>
                             <Link href="/Dashboard/Subcriptiondashboard">
                                 <div className="d-flex gap-2 align-items-center">
-                                    <Image src={subscription_icon} alt="subscription_icon" width={24} height={24} />
+                                    <Image src={subscription_icon} alt="subscription_icon" width={20} height={20} />
                                     <span className="mb-0 fs_14 red_ff">Subscription</span>
                                 </div>
                             </Link>
@@ -138,7 +138,7 @@ const Navbar = () => {
                         <Menu.Item key="4" onClick={() => handleMenuClick('4')}>
                             <Link href="/Dashboard/FamilyMember">
                                 <div className="d-flex gap-2 align-items-center">
-                                    <Image src={Family_icon} alt="Family_icon" width={24} height={24} />
+                                    <Image src={Family_icon} alt="Family_icon" width={20} height={20} />
                                     <span className="mb-0 fs_14 red_ff">Family Member</span>
                                 </div>
                             </Link>
@@ -146,7 +146,7 @@ const Navbar = () => {
                         <Menu.Item key="5" onClick={() => handleMenuClick('5')}>
                             <Link href="/Dashboard/MyOffers">
                                 <div className="d-flex gap-2 align-items-center">
-                                    <Image src={Offers_icon} alt="Offers_icon" width={24} height={24} />
+                                    <Image src={Offers_icon} alt="Offers_icon" width={20} height={20} />
                                     <span className="mb-0 fs_14 red_ff">My Offers</span>
                                 </div>
                             </Link>
@@ -154,7 +154,7 @@ const Navbar = () => {
                         <Menu.Item key="6" onClick={() => handleMenuClick('6')}>
                             <Link href="/Dashboard/FAQ">
                                 <div className="d-flex gap-2 align-items-center">
-                                    <Image src={Faq_icon} alt="faq_icon" width={24} height={24} />
+                                    <Image src={Faq_icon} alt="faq_icon" width={20} height={20} />
                                     <span className="mb-0 fs_14 red_ff">FAQ</span>
                                 </div>
                             </Link>
@@ -162,7 +162,7 @@ const Navbar = () => {
                         <Menu.Item key="7" onClick={() => handleMenuClick('7')}>
                             <Link href="/Dashboard/SupportPage">
                                 <div className="d-flex gap-2 align-items-center">
-                                    <Image src={Support_icon} alt="Support_icon" width={24} height={24} />
+                                    <Image src={Support_icon} alt="Support_icon" width={20} height={20} />
                                     <span className="mb-0 fs_14 red_ff">Support</span>
                                 </div>
                             </Link>

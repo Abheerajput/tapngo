@@ -9,7 +9,11 @@ import Share from "../../../../public/assets/images/svg/share.svg"
 import download  from "../../../../public/assets/images/svg/download.svg"
 import Image from 'next/image';
 
+type ComponentType = 'Usage' | 'Tax Invoice' | 'Statements';
 const UsagesList = () => {
+  const [activeComponent, setActiveComponent] = useState<ComponentType>('Usage');
+  
+  const handleComponentChange = (component: ComponentType) => () => setActiveComponent(component);
   const data = [
     {
       code: '001491',
@@ -95,32 +99,32 @@ const UsagesList = () => {
         <table className='table'>
           <thead>
             <tr>
-              <th scope='col' className='red-ff text-start text-dark'>Invoice No.</th>
-              <th scope='col' className='text-start text-dark'>Date</th>
-              <th scope='col' className='text-start text-dark'>From</th>
-              <th scope='col' className='text-start text-dark'>To</th>
-              <th scope='col' className='text-success text-start text-dark'>Status</th>
-              <th scope='col' className='text-start text-dark'>Amount</th>
-              <th scope='col text-start text-dark'></th>
-              <th scope='col text-start text-dark'></th>
+              <th scope='col' className='red-ff fs_16 fw-medium text-start Usage-text-color'>Invoice No.</th>
+              <th scope='col' className='red-ff fs_16 fw-medium text-start Usage-text-color'>Date</th>
+              <th scope='col' className='red-ff fs_16 fw-medium text-start Usage-text-color'>From</th>
+              <th scope='col' className='red-ff fs_16 fw-medium text-start Usage-text-color'>To</th>
+              <th scope='col' className='red-ff fs_16 fw-medium text-start Usage-text-color'>Status</th>
+              <th scope='col' className='red-ff fs_16 fw-medium text-start Usage-text-color'>Amount</th>
+              <th scope='col red-ff fs_16 fw-medium text-start Usage-text-color'></th>
+              <th scope='col red-ff fs_16 fw-medium text-start Usage-text-color'></th>
             </tr>
           </thead>
           <tbody>
             {data.map((row, index) => (
               <tr key={index}>
-                <td className='text-nowrap text-start text-dark'>{row.code}</td>
-                <td className='text-nowrap text-start text-dark'>{row.date}</td>
-                <td className='text-nowrap text-start text-dark'>{row.name}</td>
-                <td className='text-nowrap text-start text-dark'>{row.company}</td>
-                <td className='text-success text-start text-nowrap'>{row.status}</td>
-                <td className='red-ff fw-medium text-start text-nowrap text-dark'>{row.amount}</td>
+                <td className='text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>{row.code}</td>
+                <td className='text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>{row.date}</td>
+                <td className='text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>{row.name}</td>
+                <td className='text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>{row.company}</td>
+                <td className='text-success fs_14 red_ff  text-start text-nowrap'>{row.status}</td>
+                <td className='fs_14 red_ff fw-medium  text-start text-nowrap '>{row.amount}</td>
                 <td>
-                  <p className='action text-nowrap text-start text-dark'>
+                  <p className='action text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>
                     share <Image src={Share} alt='share' />
                   </p>
                 </td>
                 <td>
-                  <p className='action text-nowrap text-start text-dark'>
+                  <p className='action text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>
                     download <Image src={download} alt='download' />
                   </p>
                 </td>
@@ -134,10 +138,10 @@ const UsagesList = () => {
         <table className='table'>
           <thead>
             <tr>
-              <th scope='col' className='red-ff text-start'>Invoice No.</th>
-              <th scope='col' className='text-start'>Date</th>
-              <th scope='col' className='text-start'>From</th>
-              <th scope='col' className='text-start'>To</th>
+              <th scope='col' className='red-ff fs_16 fw-medium text-start Usage-text-color '>Invoice No.</th>
+              <th scope='col' className='red-ff fs_16 fw-medium text-start Usage-text-color'>Date</th>
+              <th scope='col' className='red-ff fs_16 fw-medium text-start Usage-text-color'>From</th>
+              <th scope='col' className='red-ff fs_16 fw-medium text-start Usage-text-color'>To</th>
               <th scope='col' className='text-success text-start'>Status</th>
               <th scope='col' className='text-start'>Amount</th>
               <th scope='col text-start'></th>
@@ -147,19 +151,19 @@ const UsagesList = () => {
           <tbody>
             {data1.map((row, index) => (
               <tr key={index}>
-                <td className='text-nowrap text-start'>{row.code}</td>
-                <td className='text-nowrap text-start'>{row.date}</td>
-                <td className='text-nowrap text-start'>{row.name}</td>
-                <td className='text-nowrap text-start'>{row.company}</td>
-                <td className='text-success text-start text-nowrap'>{row.status}</td>
-                <td className='red-ff fw-medium text-start text-nowrap'>{row.amount}</td>
+                <td className='text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>{row.code}</td>
+                <td className='text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>{row.date}</td>
+                <td className='text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>{row.name}</td>
+                <td className='text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>{row.company}</td>
+                <td className='text-success fs_14 red_ff  text-start text-nowrap'>{row.status}</td>
+                <td className='fs_14 red_ff fw-medium  text-start text-nowrap'>{row.amount}</td>
                 <td>
-                  <p className='action text-nowrap text-start'>
+                  <p className='action text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>
                     share <Image src={Share} alt='share' />
                   </p>
                 </td>
                 <td>
-                  <p className='action text-nowrap text-start'>
+                  <p className='action text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>
                     download <Image src={download} alt='download' />
                   </p>
                 </td>
@@ -173,32 +177,32 @@ const UsagesList = () => {
         <table className='table'>
           <thead>
             <tr>
-              <th scope='col' className='red-ff text-start text-dark'>Description</th>
-              <th scope='col' className='text-start text-dark'>Date</th>
-              <th scope='col' className='text-start text-dark'>Total Usage</th>
-              <th scope='col' className='text-start text-dark'>Total Recharge</th>
-              <th scope='col' className='text-success text-start text-dark'>Card Balance</th>
-              <th scope='col' className='text-start text-dark'>Amount</th>
+              <th scope='col' className='red-ff fs_16 fw-medium text-start Usage-text-color'>Description</th>
+              <th scope='col' className='red-ff fs_16 fw-medium text-start Usage-text-color'>Date</th>
+              <th scope='col' className='red-ff fs_16 fw-medium text-start Usage-text-color'>Total Usage</th>
+              <th scope='col' className='red-ff fs_16 fw-medium text-start Usage-text-color'>Total Recharge</th>
+              <th scope='col' className='red-ff fs_16 fw-medium text-start Usage-text-color'>Card Balance</th>
+              <th scope='col' className='red-ff fs_16 fw-medium text-start Usage-text-color'></th>
               <th scope='col text-start'></th>
               <th scope='col text-start'></th>
             </tr>
           </thead>
           <tbody>
             {data2.map((row, index) => (
-              <tr key={index}>
-                <td className='text-nowrap text-start'>{row.Description}</td>
-                <td className='text-nowrap text-start'>{row.date}</td>
-                <td className='text-nowrap text-start'>{row.TotalUsage}</td>
-                <td className='text-nowrap text-start'>{row.Recharge}</td>
-                <td className='text-success text-start text-nowrap'>{row.balance}</td>
-                <td className='red-ff fw-medium text-start text-nowrap'></td>
+              <tr key={index}> 
+                <td className='text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>{row.Description}</td>
+                <td className='text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>{row.date}</td>
+                <td className='text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>{row.TotalUsage}</td>
+                <td className='text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>{row.Recharge}</td>
+                <td className='text-success fs_14 red_ff  text-start text-nowrap'>{row.balance}</td>
+                <td className='fs_14 red_ff fw-medium  text-start text-nowrap'></td>
                 <td>
-                  <p className='action text-nowrap text-start'>
+                  <p className='action text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>
                     share <Image src={Share} alt='share' />
                   </p>
                 </td>
                 <td>
-                  <p className='action text-nowrap text-start'>
+                  <p className='action text-nowrap text-start  fs_14 fw-normal Usage-text-color red_ff'>
                     download <Image src={download} alt='download' />
                   </p>
                 </td>
@@ -216,24 +220,28 @@ const UsagesList = () => {
         <div className="rounded-2 mt-4 py-md-3 px-md-4 p-3">
           <Row className="justify-content-between align-items-center">
             <div className="col-6">
-              <Row className="d-none d-md-flex">
+              <Row className="d-none d-md-flex Usage-gap-lg-2">
                 <Col sm={4} className="pe-0 text-center" onClick={() => handleTabClick('Usage')}>
-                  <Nav.Link href="#" className={selectedTab === 'Usage' ? 'active-tab' : ''}>
-                    <h3 className="red_ff fs_24 text-dark">Usage</h3>
+                  <Nav.Link href="#" className=   {selectedTab === 'Usage' ? '' : ''}>
+
+                    <p className={`fs_24 Usage-custom-margin border-1 fw-normal  List-text-color m-0 p-0 ${selectedTab === 'Usage' ? 'Usage-active' : ''}  `}>
+                    Usage</p>
                   </Nav.Link>
-                  <div className={`mt-2 border-1 border ${selectedTab === 'Usage' ? 'custom_border' : 'border-body'}`}></div>
+                  <div className={` border ${selectedTab === 'Usage' ? '' : ''}`} ></div>
                 </Col>
                 <Col sm={4} className="px-0 text-center" onClick={() => handleTabClick('TaxInvoice')}>
-                  <Nav.Link href="#" className={selectedTab === 'TaxInvoice' ? 'active-tab' : ''}>
-                    <h3 className="fs_24 text-dark">Tax Invoice</h3>
+                  <Nav.Link href="#" className={selectedTab === 'TaxInvoice' ? '' : ''}>
+                    <p className={`fs_24 Usage-custom-margin border-1 fw-normal List-text-color red_ff m-0 p-0  text-nowrap ${selectedTab === 'TaxInvoice' ? ' Usage-active' : ''} `}
+                    >Tax Invoice</p>
                   </Nav.Link>
-                  <div className={`mt-2 border-1 border ${selectedTab === 'TaxInvoice' ? 'custom_border' : 'border-body'}`}></div>
+                  <div className={` border ${selectedTab === 'TaxInvoice' ? ' ' : ''}`}></div>
                 </Col>
                 <Col sm={4} className="px-0 text-center" onClick={() => handleTabClick('Statements')}>
-                  <Nav.Link href="#" className={selectedTab === 'Statements' ? 'active-tab' : ''}>
-                    <h3 className="fs_24 text-dark red_ff">Statements</h3>
+                  <Nav.Link href="#" className={selectedTab === 'Statements' ? '' : ''}>
+                    <p className={`fs_24 Usage-custom-margin border-1 fw-normal List-text-color red_ff m-0 p-0 ${selectedTab === 'Statements' ? 'Usage-active' : ''}`}>Statements</p>
+
                   </Nav.Link>
-                  <div className={`mt-2 border-1 border ${selectedTab === 'Statements' ? 'custom_border' : 'border-body'}`}></div>
+                  <div className={` border ${selectedTab === 'Statements' ? '' : ''}`}></div>
                 </Col>
               </Row>
 
