@@ -8,36 +8,16 @@
   background: rgba(255, 255, 255, 0.3);
 }
 
-<<<<<<< HEAD
-.w-20{
-  width: 20% !important;
-}
-.header-background-color{
-  background-color: #F0F0F1;
-=======
 .w-20 {
   width: 20% !important;
 }
 .header-background-color {
   background-color: #f0f0f1;
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
 }
 .header-responsive {
   display: flex;
   justify-content: space-between;
   align-items: center;
-<<<<<<< HEAD
-  
-}
-
-.bg-sidebar{
-  background-color: #021536 !important; 
-}
-.footer {
-  text-align: center;
-  background-color: #021536; 
-  color: white; 
-=======
 }
 
 .bg-sidebar {
@@ -47,16 +27,11 @@
   text-align: center;
   background-color: #021536;
   color: white;
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
   padding: 10px 0;
   position: absolute;
   bottom: 0;
 }
-<<<<<<< HEAD
-.line-height{
-=======
 .line-height {
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
   line-height: 0px !important;
 }
 
@@ -76,11 +51,7 @@
 :where(.css-dev-only-do-not-override-zg0ahe).ant-menu-dark
   > .ant-menu
   .ant-menu-item-selected {
-<<<<<<< HEAD
-    background-color: #021536 !important;
-=======
   background-color: #021536 !important;
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
   border-radius: 0 !important;
   margin: 0 !important;
   width: 100% !important;
@@ -122,13 +93,6 @@
 :where(.css-dev-only-do-not-override-zg0ahe).ant-drawer .ant-drawer-content {
   width: 70% !important;
 }
-<<<<<<< HEAD
-:where(.css-dev-only-do-not-override-m4timi).ant-menu-dark .ant-menu-item-selected, :where(.css-dev-only-do-not-override-m4timi).ant-menu-dark > .ant-menu .ant-menu-item-selected {
-  background-color: #1A273E;
-}
-
-/* Show menu button and hide the Sider on small screens */
-=======
 :where(.css-dev-only-do-not-override-m4timi).ant-menu-dark
   .ant-menu-item-selected,
 :where(.css-dev-only-do-not-override-m4timi).ant-menu-dark
@@ -196,7 +160,6 @@
 :where(.css-dev-only-do-not-override-m4timi).ant-layout-header {
   line-height: 37px !important;
 }
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
 @media (max-width: 992px) {
   .header-responsive .menu-button {
     display: grid;
@@ -207,26 +170,6 @@
   .drawer-responsive .ant-drawer-body {
     padding: 0;
   }
-<<<<<<< HEAD
-  
-
-}
-
-
-@media (max-width: 768px) {
-  .res-header-background-color {
-      width: 100%;
-      padding: 0 !important;
-      margin: 0 !important;
-  }
-  .res-bg{
-    background-color: white;
-      }
-      .full-width{
-        width: 100vw !important;
-          }
-}
-=======
 }
 
 @media (max-width: 768px) {
@@ -242,4 +185,3 @@
     width: 100vw !important;
   }
 }
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d

@@ -1,13 +1,4 @@
 .site-layout .site-layout-background {
-<<<<<<< HEAD
-  background: #F0F0F1;
-}
-.custom-background{
-  background-color: #F0F0F1;
-}
-.active-color{
-  background-color: #021536;
-=======
   background: #f0f0f1;
 }
 .custom-background {
@@ -15,7 +6,6 @@
 }
 .active-color {
   background-color: #fbfbfb37 !important;
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
 }
 .logo {
   height: 32px;
@@ -23,29 +13,13 @@
   background: rgba(255, 255, 255, 0.3);
 }
 
-<<<<<<< HEAD
-.w-20{
-=======
 .w-20 {
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
   width: 20% !important;
 }
 .header-responsive {
   display: flex;
   justify-content: space-between;
   align-items: center;
-<<<<<<< HEAD
-
-}
-
-.bg-sidebar{
-  background-color: #021536; 
-}
-.footer {
-  text-align: center;
-  background-color: #021536; 
-  color: white; 
-=======
 }
 
 .bg-sidebar {
@@ -55,16 +29,11 @@
   text-align: center;
   background-color: #021536;
   color: white;
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
   padding: 10px 0;
   position: absolute;
   bottom: 0;
 }
-<<<<<<< HEAD
-.line-height{
-=======
 .line-height {
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
   line-height: 0px !important;
 }
 
@@ -84,11 +53,7 @@
 :where(.css-dev-only-do-not-override-zg0ahe).ant-menu-dark
   > .ant-menu
   .ant-menu-item-selected {
-<<<<<<< HEAD
-    background-color: #021536 !important;
-=======
   background-color: #021536 !important;
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
   border-radius: 0 !important;
   margin: 0 !important;
   width: 100% !important;
@@ -104,11 +69,7 @@
 }
 
 .site-layout .site-layout-background {
-<<<<<<< HEAD
-  background-color:#F0F0F1 !important;
-=======
   background-color: #f0f0f1 !important;
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
 }
 
 :where(.css-dev-only-do-not-override-zg0ahe).ant-layout-header {
@@ -126,11 +87,6 @@
   width: 70% !important;
 }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
 @media (max-width: 992px) {
   .header-responsive .menu-button {
     display: grid;

@@ -23,11 +23,7 @@ const DownloadCardModal: React.FC<DownloadCardModalProps> = ({ show, handleClose
                 <Image src={Apple_wallet} alt="Apple Wallet" className="me-3 ms-3" />
                 <span className='fs-18 red_ff'>Apple Wallet</span>
               </div>
-<<<<<<< HEAD
-              <input type="radio" name="wallet" className='me-4 '/>
-=======
               <input type="radio" name="wallet" className='me-4 ' style={{width:"30px",height:"40px",backgroundColor:"white"}}/>
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
             </Card.Body>
           </Card>
           <Card className='mb-2 border-0 m-0'>
@@ -36,26 +32,12 @@ const DownloadCardModal: React.FC<DownloadCardModalProps> = ({ show, handleClose
                 <Image src={Samsung_wallet} alt="Samsung Wallet" className="me-3 ms-3" />
                 <span className="fs-18 red_ff"> Samsung Wallet</span>
               </div>
-<<<<<<< HEAD
-              <input type="radio" name="wallet" className='me-4 ' />
-=======
               <input type="radio" name="wallet" className='me-4 ' style={{width:"30px",height:"40px",backgroundColor:"white"}}/>
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
             </Card.Body>
           </Card>
           <Card className='mb-2 border-0 m-0'>
             <Card.Body className='d-flex justify-content-between align-items-center'>
               <div className='d-flex align-items-center'>
-<<<<<<< HEAD
-                <Image src={Google_wallet} alt="Google Wallet" className="me-3 ms-3" />
-                <span className='fs-18 red_ff'>Google Wallet</span>
-              </div>
-              <input type="radio" name="wallet" className='me-4 ' />
-            </Card.Body>
-          </Card>
-        </Row>
-        <Button variant="primary" className='w-100 mt-3'>Download</Button>
-=======
                 <Image src={Google_wallet} alt="Google Wallet" className="me-3 ms-3"  />
                 <span className='fs-18 red_ff'>Google Wallet</span>
               </div>
@@ -64,7 +46,6 @@ const DownloadCardModal: React.FC<DownloadCardModalProps> = ({ show, handleClose
           </Card>
         </Row>
         <Button variant="primary" className='w-100 mt-3 py-3'>Download</Button>
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
       </Modal.Body>
     </Modal>
   );

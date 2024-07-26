@@ -77,8 +77,6 @@
   margin: 10px; 
 }
 
-<<<<<<< HEAD
-=======
 /* Style for the input field */
 .custom-input {
   position: relative;
@@ -93,7 +91,6 @@
   position: absolute;
   margin-left: 20% !important; /* Adjust the horizontal position as needed */
 }
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
 
 .d-flex.flex-wrap {
   flex-wrap: nowrap;

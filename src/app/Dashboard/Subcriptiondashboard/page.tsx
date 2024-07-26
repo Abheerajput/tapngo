@@ -89,11 +89,7 @@ const Subscription = () => {
                     <div>
                       <Card.Title className="fs_20 fw-medium red_ff dashboard-text-color    ">{row.heading}</Card.Title>
                       <div className='d-flex align-items-end mar-bot-2 mb-2'>
-<<<<<<< HEAD
-                        <p className="fs_40 mb-0 fw-medium red_ff dashboard-text-color" >{row.price}</p>
-=======
                         <p className="fs_40 mb-0 fw-semibold red_ff dashboard-text-color" >{row.price}</p>
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
                         <p className="mb-2 fs_16 red_ff fw-normal dashboard-text-color">{row.month}</p>
                       </div>
                       <hr />
@@ -106,14 +102,6 @@ const Subscription = () => {
                       </Card.Text>
                     </div>
                     <div className='d-flex justify-content-center mt-5 pt-5 red_ff'>
-<<<<<<< HEAD
-                      <Button variant="primary" className='w-100 '>{row.plan}</Button>
-                      {/* {index === 0 && row.isActive && (
-                        <div className='fs_14 w-100  current-plan-bg'>
-                          Current Plan
-                        </div>
-                      )} */}
-=======
                     
                     
                         {isSelect=== index?<><div className='fs_14 w-100 text-center  '>
@@ -125,7 +113,6 @@ const Subscription = () => {
                           
                         </div>
                       </>:<>  <Button variant="primary" onClick={()=>setIsSelect(index)} className='w-100 '>{row.plan}</Button></>}
->>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
                     </div>
                   </Card.Body>
                 </Card>
