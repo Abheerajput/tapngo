@@ -1,4 +1,5 @@
 "use client";
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
@@ -6,6 +7,15 @@ import UsagesList from './UsagesList';
 import Chart from "chart.js";
 import Group from "../../../../public/assets/images/svg/Group.svg";
 import Layout from '@/app/components/Layout/Laytout';
+=======
+import React, { useEffect, useState } from "react";
+import { Row, Col } from "react-bootstrap";
+import Image from "next/image";
+import UsagesList from "./UsagesList";
+import Chart from "chart.js";
+import Group from "../../../../public/assets/images/svg/Group.svg";
+import Layout from "@/app/components/Layout/Laytout";
+>>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
 
 declare global {
   interface Window {
@@ -21,8 +31,23 @@ const Usages: React.FC = () => {
       type: "bar",
       data: {
         labels: [
+<<<<<<< HEAD
           "Jan", "Feb", "Mar", "Apr", "May", "Jun",
           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+=======
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec",
+>>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
         ],
         datasets: [
           {
@@ -30,6 +55,10 @@ const Usages: React.FC = () => {
             backgroundColor: "#FFCA00",
             data: [90, 20, 130, 80, 50, 90, 30, 60, 90, 20, 80, 30],
             barThickness: 20,
+<<<<<<< HEAD
+=======
+          
+>>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
           },
           {
             label: "Spending",
@@ -55,17 +84,35 @@ const Usages: React.FC = () => {
           intersect: true,
         },
         legend: {
+<<<<<<< HEAD
           labels: {
             fontColor: "rgba(0,0,0,.7)",
           },
           align: "start",
           position: "top",
+=======
+            labels: {
+              boxWidth: 10,
+              fontColor: "rgba(0,0,0,.7)", // Adjust this value to make the boxes narrower
+            },
+            styles:{
+display:"none"
+            },
+            className: "custom-legend",
+          align: "cenetr",
+          position: "top",
+        
+>>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
         },
         scales: {
           xAxes: [
             {
               display: true,
+<<<<<<< HEAD
              
+=======
+
+>>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
               gridLines: {
                 display: false,
               },
@@ -87,8 +134,13 @@ const Usages: React.FC = () => {
               ticks: {
                 beginAtZero: true,
                 suggestedMax: 160,
+<<<<<<< HEAD
                 callback: function(value) {
                   return '$' + value;
+=======
+                callback: function (value) {
+                  return "$" + value;
+>>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
                 },
               },
             },
@@ -97,11 +149,21 @@ const Usages: React.FC = () => {
       },
     };
 
+<<<<<<< HEAD
     const ctx = document.getElementById("bar-chart") as HTMLCanvasElement | null;
     if (ctx) {
       const context = ctx.getContext("2d");
       if (context) {
         if (window.myBar) window.myBar.destroy();  
+=======
+    const ctx = document.getElementById(
+      "bar-chart"
+    ) as HTMLCanvasElement | null;
+    if (ctx) {
+      const context = ctx.getContext("2d");
+      if (context) {
+        if (window.myBar) window.myBar.destroy();
+>>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
         window.myBar = new Chart(context, config);
       }
     }
@@ -109,6 +171,7 @@ const Usages: React.FC = () => {
 
   return (
     <Layout>
+<<<<<<< HEAD
       <div className='px-3'>
 
      
@@ -180,9 +243,97 @@ const Usages: React.FC = () => {
         </Row>
         <UsagesList />
       </div>
+=======
+      <div className="px-3">
+        <div className="bg-white mt-3 custom-padding rounded-2">
+          <Row>
+            <Col xs={12} md={8}>
+              <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 rounded">
+                <div className="rounded-t mb-0 pb-3 bg-transparent">
+                  <div className="d-flex justify-content-between align-items-center">
+                    <p className="fs_24 red_ff mb-1 fw-semibold Usage-text-color">
+                      Spending Overview
+                    </p>
+                  </div>
+                </div>
+                <div className=" border border-1 flex-auto">
+                  {/* Chart */}
+                  <span className="relative d-flex justify-content-end mt-4 pe-2 mb-4 ">
+                    
+                    <select
+                      className="form-select w-auto"
+                      value={year}
+                      onChange={(e) => setYear(Number(e.target.value))}
+                    >
+                      {[2024, 2023, 2022].map((y) => (
+                        <option key={y} value={y}>
+                          {y}
+                        </option>
+                      ))}
+                    </select>
+                  </span>
+
+                  <div className="relative h-350-px  pb-3">
+                  
+                    <canvas id="bar-chart" ></canvas>
+                  </div>
+                </div>
+              </div>
+            </Col>
+            <Col xs={12} lg={4} className="">
+              <span className="fs_24 red_ff m fw-semibold Usage-text-color">
+                Usage Category
+              </span>
+              <Row xs={2} md={2} className="g-2 mt-1">
+                <Col lg={6} xs={6} className="p-2  ">
+                  <div className="border border-color ps-3 pt-3 pb-2 text-dark me-2 Usage-Category-box">
+                    <p>Car-Wash</p>
+                    <Image src={Group} alt="Car-Wash" />
+                    <p className="fs_20 fw-semibold red_ff pt-3 text-dark">
+                      $116
+                    </p>
+                  </div>
+                </Col>
+                <Col lg={6} xs={6} className="p-2">
+                  <div className="border text-dark border-color ps-3 pb-2 pt-3 text-nowrap me-2 Usage-Category-box">
+                    <p>Laundry Shop</p>
+                    <Image src={Group} alt="Laundry Shop" />
+                    <p className="fs_20 fw-semibold red_ff pt-3 text-dark">
+                      $116
+                    </p>
+                  </div>
+                </Col>
+                <Col lg={6} xs={6} className="p-2">
+                  <div className="border border-color ps-3 pt-3 pb-2 text-dark text-nowrap me-2 Usage-Category-box">
+                    <p>Valet Service</p>
+                    <Image src={Group} alt="Valet Service" />
+                    <p className="fs_20 fw-semibold red_ff pt-3 text-dark">
+                      $116
+                    </p>
+                  </div>
+                </Col>
+                <Col lg={6} xs={6} className="p-2">
+                  <div className="border border-color ps-2 pt-3 pb-2 text-dark me-2 Usage-Category-box">
+                    <p>Ping-Pong</p>
+                    <Image src={Group} alt="Ping-Pong" />
+                    <p className="fs_20 fw-semibold red_ff pt-3 text-dark">
+                      $116
+                    </p>
+                  </div>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+          <UsagesList />
+        </div>
+>>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
       </div>
     </Layout>
   );
 };
 
+<<<<<<< HEAD
 export default Usages;
+=======
+export default Usages;
+>>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d

@@ -77,6 +77,23 @@
   margin: 10px; 
 }
 
+<<<<<<< HEAD
+=======
+/* Style for the input field */
+.custom-input {
+  position: relative;
+  padding-left: 20px; /* Adjust padding as needed to move placeholder */
+
+}
+
+/* Style for the placeholder text */
+.custom-input::placeholder {
+  color: green; /* Change the placeholder text color */
+  transform: translateY(-50%); /* Adjust the vertical position if needed */
+  position: absolute;
+  margin-left: 20% !important; /* Adjust the horizontal position as needed */
+}
+>>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
 
 .d-flex.flex-wrap {
   flex-wrap: nowrap;

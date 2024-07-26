@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 
 {
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
+=======
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+>>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -19,9 +29,27 @@
       }
     ],
     "paths": {
+<<<<<<< HEAD
       "@/*": ["./src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
+=======
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "strictNullChecks": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+>>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
 }

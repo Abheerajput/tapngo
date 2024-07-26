@@ -1,12 +1,21 @@
 "use client"
+<<<<<<< HEAD
 import React from 'react';
 import { Row, Col, Card, Button } from 'react-bootstrap';
 
+=======
+import React, { useState } from 'react';
+import { Row, Col, Card, Button } from 'react-bootstrap';
+>>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
 import Image from 'next/image';
 import Layout from '@/app/components/Layout/Laytout';
 import Tick from "../../../../public/assets/images/svg/tick.svg";
 import "./subcription.css"
 const Subscription = () => {
+<<<<<<< HEAD
+=======
+  const [isSelect,setIsSelect]=useState(null)
+>>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
   const data = [
     {
       heading: "Starter Plan",
@@ -17,7 +26,11 @@ const Subscription = () => {
       info2: "Budgeting Tools",
       info3: "Expense Tracking",
       info4: "Customer Support",
+<<<<<<< HEAD
       plan: "Current Plan",
+=======
+      plan: "Upgrade Now",
+>>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
       isActive: true
     },
     {
@@ -76,7 +89,11 @@ const Subscription = () => {
                     <div>
                       <Card.Title className="fs_20 fw-medium red_ff dashboard-text-color    ">{row.heading}</Card.Title>
                       <div className='d-flex align-items-end mar-bot-2 mb-2'>
+<<<<<<< HEAD
                         <p className="fs_40 mb-0 fw-medium red_ff dashboard-text-color" >{row.price}</p>
+=======
+                        <p className="fs_40 mb-0 fw-semibold red_ff dashboard-text-color" >{row.price}</p>
+>>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
                         <p className="mb-2 fs_16 red_ff fw-normal dashboard-text-color">{row.month}</p>
                       </div>
                       <hr />
@@ -89,12 +106,26 @@ const Subscription = () => {
                       </Card.Text>
                     </div>
                     <div className='d-flex justify-content-center mt-5 pt-5 red_ff'>
+<<<<<<< HEAD
                       <Button variant="primary" className='w-100 '>{row.plan}</Button>
                       {/* {index === 0 && row.isActive && (
                         <div className='fs_14 w-100  current-plan-bg'>
                           Current Plan
                         </div>
                       )} */}
+=======
+                    
+                    
+                        {isSelect=== index?<><div className='fs_14 w-100 text-center  '>
+                          <span className='w-100 d-flex justify-content-center'>
+                          <p className='text-center fw-semibold fs_16 red_ff w-25 ' style={{borderBottom:"2px solid #1364F1",color:"#1364F1"}}>Cancle</p>
+                          </span>
+                        
+                          <button className='fs_14 w-100 text-dark fw-smedium red_ff fs_16 current-plan-bg border-0 rounded-3 py-2 text-center'> Current Plan</button>
+                          
+                        </div>
+                      </>:<>  <Button variant="primary" onClick={()=>setIsSelect(index)} className='w-100 '>{row.plan}</Button></>}
+>>>>>>> 8815177228546d8faa723487948ab554a9e3dd6d
                     </div>
                   </Card.Body>
                 </Card>
