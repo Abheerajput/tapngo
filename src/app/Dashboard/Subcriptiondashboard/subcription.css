@@ -4,8 +4,17 @@
 .bg-color{
   background-color: #F3F3F399 !important;
 }
+.dashboard-text-color{
+  color: #202020;
+}
+.sub-text-color{
+  color: #404040;
+}
 .bg-white{
   background-color: white;
+}
+.current-plan-bg{
+  background-color: #E1E9F7;
 }
 
 .card {

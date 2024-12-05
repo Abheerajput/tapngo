@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import { Form, Button, Container, Row, Col, Modal } from "react-bootstrap";
 import VehicleDetails from "../authPages/VehcileDetails";
@@ -15,9 +16,9 @@ const Register = () => {
   };
 
   return (
-    <Container className="mt-4">
-      <Form>
-        <Row>
+    <Container className="mt-4 ">
+      <Form >
+        <Row >
           <Col md={6} className="mb-3">
             <Form.Group controlId="formFirstName">
               <Form.Label className="fs-6 red_ff color_lightblack fw-medium">

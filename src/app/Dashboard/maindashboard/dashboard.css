@@ -1,38 +1,39 @@
 .site-layout .site-layout-background {
-  background: #F0F0F1;
+  background: #f0f0f1;
 }
-.custom-background{
-  background-color: #F0F0F1;
+.custom-background {
+  background-color: #f0f0f1;
 }
-
+.active-color {
+  background-color: #fbfbfb37 !important;
+}
 .logo {
   height: 32px;
   margin: 16px;
   background: rgba(255, 255, 255, 0.3);
 }
 
-.w-20{
+.w-20 {
   width: 20% !important;
 }
 .header-responsive {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
-.bg-sidebar{
-  background-color: #021536; 
+.bg-sidebar {
+  background-color: #021536;
 }
 .footer {
   text-align: center;
-  background-color: #021536; 
-  color: white; 
+  background-color: #021536;
+  color: white;
   padding: 10px 0;
   position: absolute;
   bottom: 0;
 }
-.line-height{
+.line-height {
   line-height: 0px !important;
 }
 
@@ -52,7 +53,7 @@
 :where(.css-dev-only-do-not-override-zg0ahe).ant-menu-dark
   > .ant-menu
   .ant-menu-item-selected {
-    background-color: #021536 !important;
+  background-color: #021536 !important;
   border-radius: 0 !important;
   margin: 0 !important;
   width: 100% !important;
@@ -68,7 +69,7 @@
 }
 
 .site-layout .site-layout-background {
-  background-color:#F0F0F1 !important;
+  background-color: #f0f0f1 !important;
 }
 
 :where(.css-dev-only-do-not-override-zg0ahe).ant-layout-header {
@@ -85,8 +86,6 @@
 :where(.css-dev-only-do-not-override-zg0ahe).ant-drawer .ant-drawer-content {
   width: 70% !important;
 }
-
-
 
 @media (max-width: 992px) {
   .header-responsive .menu-button {
